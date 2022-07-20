@@ -1,0 +1,19 @@
+%grid-place-center {
+  display: grid;
+  place-items: center;
+}
+
+%flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+%flex-items-center {
+  display: flex;
+  align-items: center;
+}
+
+%flex-between {
+  display: flex;
+  justify-content: space-between;
+}
