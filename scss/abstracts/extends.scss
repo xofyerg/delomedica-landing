@@ -8,6 +8,11 @@
   flex-direction: column;
 }
 
+%flex-center {
+  display: flex;
+  justify-content: center;
+}
+
 %flex-items-center {
   display: flex;
   align-items: center;

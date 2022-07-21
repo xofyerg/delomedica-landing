@@ -1,0 +1,17 @@
+.hero {
+  position: relative;
+  height: 870px;
+  background: $background;
+  @extend %grid-place-center;
+
+  &__girl {
+    position: absolute;
+    height: 90%;
+    bottom: 0;
+  }
+
+  &__wrap {
+    @extend %flex-between;
+    width: 900px;
+  }
+}

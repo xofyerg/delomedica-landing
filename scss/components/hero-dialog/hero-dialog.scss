@@ -1,0 +1,11 @@
+.hero-dialog {
+  width: 400px;
+  background-color: $white;
+  background-size: 400px 250px;
+  background-repeat: no-repeat;
+  z-index: 10;
+
+  &__form {
+    @extend %flex-col;
+  }
+}

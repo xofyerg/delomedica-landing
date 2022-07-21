@@ -1,0 +1,8 @@
+.quiz {
+  height: 870px;
+  background-color: $secondary;
+  @extend %grid-place-center;
+
+  &__wrap {
+  }
+}
