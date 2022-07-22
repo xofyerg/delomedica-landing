@@ -1,0 +1,27 @@
+.quiz-content {
+  width: 100%;
+  background-color: $white;
+  @extend %flex-col;
+  gap: 15px;
+
+  &__steps ul {
+    @extend %flex-between;
+  }
+
+  &__questions {
+    > span {
+      border: 1px solid $primary;
+      border-radius: 50%;
+      padding: 10px 15px;
+    }
+  }
+
+  &__text {
+    height: 170px;
+    border: 1px solid $black;
+  }
+
+  &__next-btn {
+    text-align: right;
+  }
+}

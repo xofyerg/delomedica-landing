@@ -1,0 +1,26 @@
+.check {
+  padding-left: 1.2em;
+  cursor: pointer;
+
+  &__primary {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    margin-left: -1.2em;
+    background-color: $white;
+  }
+
+  &__box {
+    box-shadow: 0 0 0 0.1em $black;
+    border-radius: 0.05em;
+  }
+
+  &__radio {
+    border: 1px solid $black;
+    border-radius: 50%;
+  }
+
+  &__input:checked + &__radio {
+    border: 6px solid $primary;
+  }
+}

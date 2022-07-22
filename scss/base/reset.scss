@@ -38,6 +38,10 @@ select {
   font-family: inherit;
 }
 
+textarea {
+  resize: none;
+}
+
 input::-ms-clear {
   display: none;
 }
@@ -77,4 +81,17 @@ h5,
 h6 {
   font-size: inherit;
   font-weight: inherit;
+}
+
+::placeholder {
+  color: $black;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: $black;
+}
+
+::-ms-input-placeholder {
+  color: $black;
 }

@@ -1,12 +1,9 @@
 .quiz-form {
   display: flex;
+  width: 750px;
+  height: 300px;
 
   &__image {
-    width: 100px;
-  }
-
-  &__content {
-    width: 100%;
-    background-color: $white;
+    width: 150px;
   }
 }

@@ -13,9 +13,33 @@
 
   &__text {
     color: $primary;
+    position: relative;
+  }
+
+  &__text::before {
+    content: "";
+    position: absolute;
+    border-left: 2px solid $primary;
+    height: 20px;
   }
 
   &__links ul {
     display: flex;
+  }
+
+  &__services {
+    position: relative;
+    margin-right: 1em;
+    cursor: pointer;
+  }
+
+  &__services::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background-image: url("assets/images/figures/down-grey.svg");
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
   }
 }

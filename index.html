@@ -25,7 +25,7 @@
               <nav>
                 <ul>
                   <li>Подбор профосмотра</li>
-                  <li>Услуги</li>
+                  <li class="header-content__services">Услуги</li>
                   <li>О медцентре</li>
                   <li>Галерея</li>
                   <li>Благодарности</li>
@@ -80,7 +80,7 @@
                 />
                 <button type="submit">Получить коммерческое предложение</button>
               </form>
-              <div class="hero-dialog__botton">
+              <div class="feedback-text-bottom">
                 Передавая информацию сайту, вы принимаете условия
                 <span>Политики защиты персональной информации</span>
               </div>
@@ -104,7 +104,193 @@
                 src="assets/images/quiz-1.png"
                 alt="guiz-1"
               />
-              <div class="quiz-form__content"></div>
+              <div class="quiz-content">
+                <div class="quiz-content__steps">
+                  <ul>
+                    <li>Шаг 1</li>
+                    <li>Шаг 2</li>
+                    <li>Шаг 3</li>
+                    <li>Шаг 4</li>
+                  </ul>
+                </div>
+                <div class="quiz-content__questions">
+                  <span class="quiz-content__number">1</span> Чем занимается
+                  ваша организация?
+                </div>
+                <textarea
+                  class="quiz-content__text"
+                  placeholder="Введите ответ"
+                ></textarea>
+                <div class="quiz-content__next-btn">
+                  <button>Далее</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="quiz-form">
+              <img
+                class="quiz-form__image"
+                src="assets/images/quiz-2.png"
+                alt="guiz-2"
+              />
+              <div class="quiz-content">
+                <div class="quiz-content__steps">
+                  <ul>
+                    <li>Шаг 1</li>
+                    <li>Шаг 2</li>
+                    <li>Шаг 3</li>
+                    <li>Шаг 4</li>
+                  </ul>
+                </div>
+                <div class="quiz-content__questions">
+                  <span class="quiz-content__number">2</span> Укажите вид
+                  необходимой услуги (Можно выбрать несколько вариантов)
+                </div>
+                <div>
+                  <ul>
+                    <li>
+                      <label class="check" for="">
+                        <input
+                          class="check__input visually-hidden"
+                          type="checkbox"
+                        />
+                        <span class="check__primary check__box"></span>
+                        Предварительный/периодический медицинский осмотр
+                      </label>
+                    </li>
+                    <li>
+                      <label class="check" for="">
+                        <input
+                          class="check__input visually-hidden"
+                          type="checkbox"
+                        />
+                        <span class="check__primary check__box"></span>
+                        Выездной медицинский осмотр (профосмотр)
+                      </label>
+                    </li>
+                    <li>
+                      <label class="check" for="">
+                        <input
+                          class="check__input visually-hidden"
+                          type="checkbox"
+                        />
+                        <span class="check__primary check__box"></span>
+                        Личные медицинские книжки
+                      </label>
+                    </li>
+                  </ul>
+                  <div></div>
+                </div>
+                <div class="elements-between">
+                  <button>Назад</button>
+                  <button>Далее</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="quiz-form">
+              <img
+                class="quiz-form__image"
+                src="assets/images/quiz-3.png"
+                alt="guiz-2"
+              />
+              <div class="quiz-content">
+                <div class="quiz-content__steps">
+                  <ul>
+                    <li>Шаг 1</li>
+                    <li>Шаг 2</li>
+                    <li>Шаг 3</li>
+                    <li>Шаг 4</li>
+                  </ul>
+                </div>
+                <div class="quiz-content__questions">
+                  <span class="quiz-content__number">3</span> Укажите количество
+                  сотрудников, которым нужно провести профосмотр.
+                </div>
+                <textarea
+                  class="quiz-content__text"
+                  placeholder="Введите число"
+                ></textarea>
+                <div class="elements-between">
+                  <button>Назад</button>
+                  <button>Далее</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="quiz-form">
+              <img
+                class="quiz-form__image"
+                src="assets/images/quiz-4.png"
+                alt="guiz-2"
+              />
+              <div class="quiz-content">
+                <div class="quiz-content__steps">
+                  <ul>
+                    <li>Шаг 1</li>
+                    <li>Шаг 2</li>
+                    <li>Шаг 3</li>
+                    <li>Шаг 4</li>
+                  </ul>
+                </div>
+                <div class="quiz-content__questions">
+                  <span class="quiz-content__number">4</span> Вы планируете
+                  пройти профосмотр в одном из наших медцентров или требуется
+                  выездная бригада?
+                </div>
+                <div>
+                  <label class="check" for="med-radio">
+                    <input
+                      id="med-radio"
+                      class="check__input visually-hidden"
+                      type="radio"
+                      name="radio-group"
+                      value="В медцентре"
+                      checked
+                    />
+                    <span class="check__primary check__radio"></span>
+                    В медцентре
+                  </label>
+                  <label class="check" for="need-radio">
+                    <input
+                      id="need-radio"
+                      class="check__input visually-hidden"
+                      type="radio"
+                      name="radio-group"
+                      value="Требуется выездная бригада"
+                    />
+                    <span class="check__primary check__radio"></span>
+                    Требуется выездная бригада
+                  </label>
+                </div>
+                <div class="elements-between">
+                  <button>Назад</button>
+                  <button>Далее</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="quiz-form">
+              <div class="quiz-feedback">
+                <div class="hero-dialog__title">
+                  Введите номер телефона, и мы вышлем вам расчет стоимости
+                  профосмотра и коммерческое предложение
+                </div>
+                <form class="hero-dialog__form">
+                  <input
+                    class="hero-dialog__number"
+                    placeholder="Ваш номер телефона"
+                    type="text"
+                  />
+                  <button type="submit">
+                    Получить коммерческое предложение
+                  </button>
+                </form>
+                <div class="feedback-text-bottom">
+                  Передавая информацию сайту, вы принимаете условия
+                  <span>Политики защиты персональной информации</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
