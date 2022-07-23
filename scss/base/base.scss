@@ -4,8 +4,11 @@ body {
 }
 
 .elements-between {
-  display: flex;
-  justify-content: space-between;
+  @extend %flex-between;
+}
+
+.element-right {
+  align-self: end;
 }
 
 .visually-hidden {

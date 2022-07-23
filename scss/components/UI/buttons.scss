@@ -1,0 +1,16 @@
+.btn-next {
+  position: relative;
+  background-color: $primary;
+  border-radius: 6px;
+  width: 140px;
+  height: 43px;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+
+  > img {
+    margin-top: 2px;
+  }
+}
