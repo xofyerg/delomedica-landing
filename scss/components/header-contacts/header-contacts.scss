@@ -1,16 +1,17 @@
 .header-contacts {
+  &__number {
+    font-size: 19px;
+    font-weight: bold;
+    margin: 12px 0 25px;
+  }
+
   &__city span {
     color: $primary;
     position: relative;
   }
 
   &__city span::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
     background-image: url("assets/images/figures/down-blue.svg");
-    background-repeat: no-repeat;
-    width: 10px;
-    height: 10px;
+    @extend %icon-margin;
   }
 }

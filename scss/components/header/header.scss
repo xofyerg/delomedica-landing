@@ -1,3 +1,10 @@
 .header {
-  @extend %flex-between;
+  height: 126px;
+
+  &__wrap {
+    @extend %flex-between;
+    align-items: center;
+    @extend %container;
+    height: 100%;
+  }
 }

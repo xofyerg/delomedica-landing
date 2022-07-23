@@ -1,11 +1,27 @@
 .hero-dialog {
-  width: 400px;
-  background-color: $white;
-  background-size: 400px 250px;
+  width: 370px;
+  height: 464px;
+  background-image: url("assets/images/shield.svg");
+  background-size: 370px 464px;
   background-repeat: no-repeat;
-  z-index: 10;
+  padding: 0 25px;
+  @extend %grid-place-center;
+
+  &__title {
+    font-size: 15px;
+    margin-bottom: 35px;
+    line-height: 20px;
+  }
 
   &__form {
     @extend %flex-col;
+    gap: 12px;
+  }
+
+  &__bottom {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 29px;
+    line-height: 15px;
   }
 }

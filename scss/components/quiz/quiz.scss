@@ -1,8 +1,27 @@
 .quiz {
-  height: 870px;
+  height: 950px;
   background-color: $secondary;
-  @extend %grid-place-center;
 
   &__wrap {
+    @extend %container;
+    @extend %flex-items-center;
+
+    > div {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__desc {
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    margin-bottom: 60px;
   }
 }

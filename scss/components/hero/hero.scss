@@ -1,17 +1,18 @@
 .hero {
-  position: relative;
-  height: 870px;
+  height: 832px;
   background: $background;
-  @extend %grid-place-center;
+  position: relative;
 
   &__girl {
     position: absolute;
-    height: 90%;
+    height: 732px;
     bottom: 0;
+    left: 18%;
   }
 
   &__wrap {
     @extend %flex-between;
-    width: 900px;
+    align-items: center;
+    @extend %container;
   }
 }

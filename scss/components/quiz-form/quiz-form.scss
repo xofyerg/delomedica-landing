@@ -1,9 +1,11 @@
 .quiz-form {
   display: flex;
-  width: 750px;
-  height: 300px;
+  height: 480px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  border: 1px solid $grey;
 
   &__image {
-    width: 150px;
+    width: 270px;
   }
 }

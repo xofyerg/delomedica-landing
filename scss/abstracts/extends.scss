@@ -1,3 +1,11 @@
+%container {
+  max-width: 1195px;
+  height: 100%;
+  margin: auto;
+  padding: 0 25px;
+  position: relative;
+}
+
 %grid-place-center {
   display: grid;
   place-items: center;
@@ -21,4 +29,15 @@
 %flex-between {
   display: flex;
   justify-content: space-between;
+}
+
+%icon-margin {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  right: -14px;
+  background-repeat: no-repeat;
+  background-size: 10px 6px;
+  width: 10px;
+  height: 6px;
 }

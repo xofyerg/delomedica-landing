@@ -1,45 +1,54 @@
 .header-content {
   &__wrap {
     display: flex;
+    margin-bottom: 15px;
   }
 
   &__logo {
     background-image: url("assets/images/logo.svg");
-    width: 150px;
-    height: 50px;
-    background-size: 150px 50px;
+    width: 191px;
+    height: 58px;
+    background-size: 191px 58px;
     background-repeat: no-repeat;
+    margin-right: 20px;
   }
 
   &__text {
+    @extend %flex-items-center;
     color: $primary;
     position: relative;
+    margin-left: 20px;
+    margin-top: 10px;
+    line-height: 22px;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   }
 
   &__text::before {
     content: "";
     position: absolute;
-    border-left: 2px solid $primary;
-    height: 20px;
+    left: -26px;
+    top: 5px;
+    border-left: 1px solid $primary;
+    height: 31px;
   }
 
   &__links ul {
     display: flex;
+    gap: 30px;
+    margin-left: 4px;
+  }
+
+  &__links ul li {
+    cursor: pointer;
   }
 
   &__services {
     position: relative;
     margin-right: 1em;
-    cursor: pointer;
   }
 
   &__services::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
     background-image: url("assets/images/figures/down-grey.svg");
-    background-repeat: no-repeat;
-    width: 10px;
-    height: 10px;
+    @extend %icon-margin;
   }
 }

@@ -16,11 +16,27 @@
   }
 
   &__radio {
-    border: 1px solid $black;
+    border: 1px solid $light;
     border-radius: 50%;
+    width: 24px;
+    height: 24px;
   }
 
   &__input:checked + &__radio {
-    border: 6px solid $primary;
+    border: 10px solid $primary;
   }
+}
+
+.input-primary {
+  height: 60px;
+  border: 1px solid $light;
+  border-radius: 6px;
+  padding: 0 21px;
+}
+
+.textarea-primary {
+  border: 1px solid $light;
+  border-radius: 6px;
+  padding: 21px;
+  height: 184px;
 }

@@ -1,3 +1,62 @@
 .hero-content {
-  width: 300px;
+  max-width: 500px;
+  @extend %flex-col;
+  gap: 40px;
+
+  &__title {
+    font-size: 23px;
+    line-height: 35px;
+  }
+
+  &__title span {
+    font-size: 30px;
+    line-height: 43px;
+    font-weight: bold;
+  }
+
+  &__list {
+    @extend %flex-col;
+    gap: 33px;
+  }
+
+  &__list li {
+    line-height: 17px;
+    margin-left: 60px;
+    position: relative;
+  }
+
+  &__check::before {
+    content: "";
+    position: absolute;
+    left: -60px;
+    background-image: url("assets/images/check.svg");
+    width: 45px;
+    height: 39px;
+    background-size: 45px 39px;
+    background-repeat: no-repeat;
+  }
+
+  &__document::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -55px;
+    background-image: url("assets/images/document.svg");
+    width: 36px;
+    height: 42px;
+    background-size: 36px 42px;
+    background-repeat: no-repeat;
+  }
+
+  &__calendar::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: -58px;
+    background-image: url("assets/images/calendar.svg");
+    width: 40px;
+    height: 43px;
+    background-size: 40px 43px;
+    background-repeat: no-repeat;
+  }
 }
