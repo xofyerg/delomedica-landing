@@ -15,8 +15,23 @@
 
   &__questions {
     @extend %flex-items-center;
+  }
+
+  &__question-title {
     font-size: 20px;
     font-weight: bold;
+  }
+
+  &__body textarea {
+    width: 100%;
+  }
+
+  &__checks {
+    column-count: 2;
+  }
+
+  &__checks li {
+    margin-bottom: 6px;
   }
 
   &__text {

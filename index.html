@@ -11,299 +11,384 @@
     <title>Delomedica</title>
   </head>
   <body>
+    <script type="module" src="app.js"></script>
 
-      <div>
-        <header class="header">
-            <div class="header__wrap">
-              <div class="header-content">
-                <div class="header-content__wrap">
-                  <div class="header-content__logo"></div>
-                  <div class="header-content__text">
-                    Медицинские профосмотры <br> в Москве и области
-                  </div>
-                </div>
-                <div class="header-content__links">
-                  <nav>
-                    <ul>
-                      <li>Подбор профосмотра</li>
-                      <li class="header-content__services">Услуги</li>
-                      <li>О медцентре</li>
-                      <li>Галерея</li>
-                      <li>Благодарности</li>
-                      <li>Лицензии</li>
-                      <li>Контакты</li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-              <div class="header-contacts">
-                <div class="header-contacts__email">prof@diamed.group</div>
-                <div class="header-contacts__number">+7 (495) 281 53 33</div>
-                <div class="header-contacts__city">
-                  Ваш город: <span>Королев</span>
-                </div>
+    <div>
+      <header class="header">
+        <div class="header__wrap">
+          <div class="header-content">
+            <div class="header-content__wrap">
+              <div class="header-content__logo"></div>
+              <div class="header-content__text">
+                Медицинские профосмотры <br />
+                в Москве и области
               </div>
             </div>
-        </header>
-
-        <div class="hero">
-          <div class="hero__wrap">
-            <img class="hero__girl" src="assets/images/girl.png" alt="girl" />
-
-            <div class="hero-content">
-                <div class="hero-content__title">
-                  <span>Проведение профосмотров <br> от 600 руб./чел.</span> <br> с выездом в вашу
-                  организацию
-                </div>
-                <ul class="hero-content__list">
-                  <li class="hero-content__check">
-                    Сделаем за вас все: <br>
-                    от подбора типа профосмотра <br> до выдачи всех документов
-                  </li>
-                  <li>
-                    <span class="hero-content__document"></span>Работаем строго по
-                    302н <br> Приказу Минздравсоцразвития
-                  </li>
-                  <li>
-                    <span class="hero-content__calendar"></span>Результаты
-                    профосмотра <br> всего за 7 дней
-                  </li>
+            <div class="header-content__links">
+              <nav>
+                <ul>
+                  <li>Подбор профосмотра</li>
+                  <li class="header-content__services">Услуги</li>
+                  <li>О медцентре</li>
+                  <li>Галерея</li>
+                  <li>Благодарности</li>
+                  <li>Лицензии</li>
+                  <li>Контакты</li>
                 </ul>
-                <div class="text-bottom">Подобрать профосмотр</div>
+              </nav>
+            </div>
+          </div>
+          <div class="header-contacts">
+            <div class="header-contacts__email">prof@diamed.group</div>
+            <div class="header-contacts__number">+7 (495) 281 53 33</div>
+            <div class="header-contacts__city">
+              Ваш город: <span>Королев</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="hero">
+        <div class="hero__wrap">
+          <img class="hero__girl" src="assets/images/girl.png" alt="girl" />
+          <div class="hero-content">
+            <div class="hero-content__title">
+              <span
+                >Проведение профосмотров <br />
+                от 600 руб./чел.</span
+              >
+              <br />
+              с выездом в вашу организацию
+            </div>
+            <ul class="hero-content__list">
+              <li class="hero-content__check">
+                Сделаем за вас все: <br />
+                от подбора типа профосмотра <br />
+                до выдачи всех документов
+              </li>
+              <li>
+                <span class="hero-content__document"></span>Работаем строго по
+                302н <br />
+                Приказу Минздравсоцразвития
+              </li>
+              <li>
+                <span class="hero-content__calendar"></span>Результаты
+                профосмотра <br />
+                всего за 7 дней
+              </li>
+            </ul>
+            <div class="text-bottom">Подобрать профосмотр</div>
+          </div>
+          <div class="hero-dialog">
+            <div class="hero-dialog__wrap">
+              <div class="hero-dialog__title">
+                Оставьте заявку, и мы предоставим полный план профосмотра с
+                расчетом итоговой стоимости, подходящий именно вашей организации
               </div>
-              <div class="hero-dialog">
-                <div class="hero-dialog__wrap">
-                  <div class="hero-dialog__title">
-                    Оставьте заявку, и мы предоставим полный план профосмотра с
-                    расчетом итоговой стоимости, подходящий именно вашей организации
-                  </div>
-                  <form class="hero-dialog__form">
-                    <input
-                            class="input-primary"
-                            placeholder="Ваш номер телефона"
-                            type="text"
-                    />
-                    <button class="btn-commercial" type="submit">Получить коммерческое предложение</button>
-                  </form>
-                  <div class="hero-dialog__bottom">
-                    Передавая информацию сайту, вы <br> принимаете условия <br>
-                    <span class="text-bottom">Политики защиты персональной <br> информации</span>
-                  </div>
-                </div>
+              <form class="hero-dialog__form">
+                <input
+                  class="input-primary"
+                  placeholder="Ваш номер телефона"
+                  type="text"
+                />
+                <button class="btn-commercial" type="submit">
+                  Получить коммерческое предложение
+                </button>
+              </form>
+              <div class="hero-dialog__bottom">
+                Передавая информацию сайту, вы <br />
+                принимаете условия <br />
+                <span class="text-bottom"
+                  >Политики защиты персональной <br />
+                  информации</span
+                >
               </div>
             </div>
+          </div>
         </div>
+      </div>
 
-        <div class="quiz">
-          <div class="quiz__wrap">
-            <div>
-              <div class="quiz__title">
-                Не знаете, какой профосмотр подойдет вашей организации?
-              </div>
-              <div class="quiz__desc">
-                Ответьте на 4 вопроса, и мы подберем подходящий профосмотр,
-                рассчитаем <br> стоимость его проведения и вышлем коммерческое
-                предложение
-              </div>
+      <div class="quiz">
+        <div class="quiz__wrap">
+          <div>
+            <div class="quiz__title">
+              Не знаете, какой профосмотр подойдет вашей организации?
+            </div>
+            <div class="quiz__desc">
+              Ответьте на 4 вопроса, и мы подберем подходящий профосмотр,
+              рассчитаем <br />
+              стоимость его проведения и вышлем коммерческое предложение
+            </div>
 
-              <div class="quiz-form">
-                <img
-                        class="quiz-form__image"
-                        src="assets/images/quiz-1.png"
-                        alt="guiz-1"
-                />
-                <div class="quiz-content">
-                  <div class="quiz-content__steps">
-                    <ul>
-                      <li>Шаг 1</li>
-                      <li>Шаг 2</li>
-                      <li>Шаг 3</li>
-                      <li>Шаг 4</li>
-                    </ul>
+            <div id="quiz-form" class="quiz-form">
+              <img
+                id="quiz-form-image"
+                class="quiz-form__image"
+                src="assets/images/quiz-1.png"
+                alt="guiz-1"
+              />
+              <div class="quiz-content">
+                <div class="quiz-content__steps">
+                  <ul>
+                    <li>Шаг 1</li>
+                    <li>Шаг 2</li>
+                    <li>Шаг 3</li>
+                    <li>Шаг 4</li>
+                  </ul>
+                </div>
+                <div class="quiz-content__questions">
+                  <div class="icon-circle">
+                    <div
+                      id="question-number"
+                      class="quiz-content__question-number"
+                    >
+                      1
+                    </div>
                   </div>
-                  <div class="quiz-content__questions">
-                    <span class="icon-circle"><div>1</div></span> Чем занимается
-                    ваша организация?
+                  <div id="question-title" class="quiz-content__question-title">
+                    Чем занимается ваша организация?
                   </div>
+                </div>
+                <div id="quiz-form-body" class="quiz-content__body">
                   <textarea
-                          class="textarea-primary"
-                          placeholder="Введите ответ"></textarea>
-                  <div class="element-right">
-                    <button class="btn-next">Далее <img src="assets/images/figures/right-white.svg" alt="next"></button>
-                  </div>
+                    class="textarea-primary"
+                    placeholder="Введите ответ"
+                  ></textarea>
+                </div>
+                <div class="elements-between">
+                  <button id="btn-quiz-prev" class="visually-hidden">
+                    Назад
+                  </button>
+                  <button id="btn-quiz-next" class="btn-next">
+                    Далее
+                    <img
+                      src="assets/images/figures/right-white.svg"
+                      alt="next"
+                    />
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-<!--            <div class="quiz-form">-->
-<!--              <img-->
-<!--                class="quiz-form__image"-->
-<!--                src="assets/images/quiz-2.png"-->
-<!--                alt="guiz-2"-->
-<!--              />-->
-<!--              <div class="quiz-content">-->
-<!--                <div class="quiz-content__steps">-->
-<!--                  <ul>-->
-<!--                    <li>Шаг 1</li>-->
-<!--                    <li>Шаг 2</li>-->
-<!--                    <li>Шаг 3</li>-->
-<!--                    <li>Шаг 4</li>-->
-<!--                  </ul>-->
-<!--                </div>-->
-<!--                <div class="quiz-content__questions">-->
-<!--                  <span class="quiz-content__number">2</span> Укажите вид-->
-<!--                  необходимой услуги (Можно выбрать несколько вариантов)-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                  <ul>-->
-<!--                    <li>-->
-<!--                      <label class="check" for="">-->
-<!--                        <input-->
-<!--                          class="check__input visually-hidden"-->
-<!--                          type="checkbox"-->
-<!--                        />-->
-<!--                        <span class="check__primary check__box"></span>-->
-<!--                        Предварительный/периодический медицинский осмотр-->
-<!--                      </label>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                      <label class="check" for="">-->
-<!--                        <input-->
-<!--                          class="check__input visually-hidden"-->
-<!--                          type="checkbox"-->
-<!--                        />-->
-<!--                        <span class="check__primary check__box"></span>-->
-<!--                        Выездной медицинский осмотр (профосмотр)-->
-<!--                      </label>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                      <label class="check" for="">-->
-<!--                        <input-->
-<!--                          class="check__input visually-hidden"-->
-<!--                          type="checkbox"-->
-<!--                        />-->
-<!--                        <span class="check__primary check__box"></span>-->
-<!--                        Личные медицинские книжки-->
-<!--                      </label>-->
-<!--                    </li>-->
-<!--                  </ul>-->
-<!--                  <div></div>-->
-<!--                </div>-->
-<!--                <div class="elements-between">-->
-<!--                  <button>Назад</button>-->
-<!--                  <button class="btn-next">Далее <img src="assets/images/figures/right-white.svg" alt="next"></button>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-
-<!--            <div class="quiz-form">-->
-<!--              <img-->
-<!--                class="quiz-form__image"-->
-<!--                src="assets/images/quiz-3.png"-->
-<!--                alt="guiz-2"-->
-<!--              />-->
-<!--              <div class="quiz-content">-->
-<!--                <div class="quiz-content__steps">-->
-<!--                  <ul>-->
-<!--                    <li>Шаг 1</li>-->
-<!--                    <li>Шаг 2</li>-->
-<!--                    <li>Шаг 3</li>-->
-<!--                    <li>Шаг 4</li>-->
-<!--                  </ul>-->
-<!--                </div>-->
-<!--                <div class="quiz-content__questions">-->
-<!--                  <span class="quiz-content__number">3</span> Укажите количество-->
-<!--                  сотрудников, которым нужно провести профосмотр.-->
-<!--                </div>-->
-<!--                <textarea-->
-<!--                  class="quiz-content__text"-->
-<!--                  placeholder="Введите число"-->
-<!--                ></textarea>-->
-<!--                <div class="elements-between">-->
-<!--                  <button>Назад</button>-->
-<!--                  <button>Далее</button>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-
-<!--            <div class="quiz-form">-->
-<!--              <img-->
-<!--                class="quiz-form__image"-->
-<!--                src="assets/images/quiz-4.png"-->
-<!--                alt="guiz-2"-->
-<!--              />-->
-<!--              <div class="quiz-content">-->
-<!--                <div class="quiz-content__steps">-->
-<!--                  <ul>-->
-<!--                    <li>Шаг 1</li>-->
-<!--                    <li>Шаг 2</li>-->
-<!--                    <li>Шаг 3</li>-->
-<!--                    <li>Шаг 4</li>-->
-<!--                  </ul>-->
-<!--                </div>-->
-<!--                <div class="quiz-content__questions">-->
-<!--                  <span class="quiz-content__number">4</span> Вы планируете-->
-<!--                  пройти профосмотр в одном из наших медцентров или требуется-->
-<!--                  выездная бригада?-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                  <label class="check" for="med-radio">-->
-<!--                    <input-->
-<!--                      id="med-radio"-->
-<!--                      class="check__input visually-hidden"-->
-<!--                      type="radio"-->
-<!--                      name="radio-group"-->
-<!--                      value="В медцентре"-->
-<!--                      checked-->
-<!--                    />-->
-<!--                    <span class="check__primary check__radio"></span>-->
-<!--                    В медцентре-->
-<!--                  </label>-->
-<!--                  <label class="check" for="need-radio">-->
-<!--                    <input-->
-<!--                      id="need-radio"-->
-<!--                      class="check__input visually-hidden"-->
-<!--                      type="radio"-->
-<!--                      name="radio-group"-->
-<!--                      value="Требуется выездная бригада"-->
-<!--                    />-->
-<!--                    <span class="check__primary check__radio"></span>-->
-<!--                    Требуется выездная бригада-->
-<!--                  </label>-->
-<!--                </div>-->
-<!--                <div class="elements-between">-->
-<!--                  <button>Назад</button>-->
-<!--                  <button>Далее</button>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-
-<!--            <div class="quiz-form">-->
-<!--              <div class="quiz-feedback">-->
-<!--                <div class="hero-dialog__title">-->
-<!--                  Введите номер телефона, и мы вышлем вам расчет стоимости-->
-<!--                  профосмотра и коммерческое предложение-->
-<!--                </div>-->
-<!--                <form class="hero-feedback__form">-->
-<!--                  <input-->
-<!--                    class="input-primary"-->
-<!--                    placeholder="Ваш номер телефона"-->
-<!--                    type="text"-->
-<!--                  />-->
-<!--                  <button class="btn-commercial" type="submit">-->
-<!--                    Получить коммерческое предложение-->
-<!--                  </button>-->
-<!--                </form>-->
-<!--                <div class="">-->
-<!--                  Передавая информацию сайту, вы принимаете условия-->
-<!--                  <span class="text-bottom">Политики защиты персональной информации</span>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-
       </div>
 
+      <!-- <div class="quiz">
+        <div class="quiz__wrap">
+          <div>
+            <div class="quiz__title">
+              Не знаете, какой профосмотр подойдет вашей организации?
+            </div>
+            <div class="quiz__desc">
+              Ответьте на 4 вопроса, и мы подберем подходящий профосмотр,
+              рассчитаем <br />
+              стоимость его проведения и вышлем коммерческое предложение
+            </div>
+
+            <div class="quiz-form">
+              <img
+                class="quiz-form__image"
+                src="assets/images/quiz-2.png"
+                alt="quiz-2"
+              />
+              <div class="quiz-content">
+                <div class="quiz-content__steps">
+                  <ul>
+                    <li>Шаг 1</li>
+                    <li>Шаг 2</li>
+                    <li>Шаг 3</li>
+                    <li>Шаг 4</li>
+                  </ul>
+                </div>
+                <div class="quiz-content__questions">
+                  <span class="icon-circle"><div>2</div></span> Укажите вид
+                  необходимой услуги (Можно выбрать несколько вариантов)
+                </div>
+                <div>
+                  <ul id="serv-checks" class="quiz-content__checks">
+                    
+                  </ul>
+                </div>
+                <div class="elements-between">
+                  <button>Назад</button>
+                  <button class="btn-next">
+                    Далее
+                    <img
+                      src="assets/images/figures/right-white.svg"
+                      alt="next"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <!--            <div class="quiz-form">-->
+      <!--              <img-->
+      <!--                class="quiz-form__image"-->
+      <!--                src="assets/images/quiz-2.png"-->
+      <!--                alt="guiz-2"-->
+      <!--              />-->
+      <!--              <div class="quiz-content">-->
+      <!--                <div class="quiz-content__steps">-->
+      <!--                  <ul>-->
+      <!--                    <li>Шаг 1</li>-->
+      <!--                    <li>Шаг 2</li>-->
+      <!--                    <li>Шаг 3</li>-->
+      <!--                    <li>Шаг 4</li>-->
+      <!--                  </ul>-->
+      <!--                </div>-->
+      <!--                <div class="quiz-content__questions">-->
+      <!--                  <span class="quiz-content__number">2</span> Укажите вид-->
+      <!--                  необходимой услуги (Можно выбрать несколько вариантов)-->
+      <!--                </div>-->
+      <!--                <div>-->
+      <!--                  <ul>-->
+      <!--                    <li>-->
+      <!--                      <label class="check" for="">-->
+      <!--                        <input-->
+      <!--                          class="check__input visually-hidden"-->
+      <!--                          type="checkbox"-->
+      <!--                        />-->
+      <!--                        <span class="check__primary check__box"></span>-->
+      <!--                        Предварительный/периодический медицинский осмотр-->
+      <!--                      </label>-->
+      <!--                    </li>-->
+      <!--                    <li>-->
+      <!--                      <label class="check" for="">-->
+      <!--                        <input-->
+      <!--                          class="check__input visually-hidden"-->
+      <!--                          type="checkbox"-->
+      <!--                        />-->
+      <!--                        <span class="check__primary check__box"></span>-->
+      <!--                        Выездной медицинский осмотр (профосмотр)-->
+      <!--                      </label>-->
+      <!--                    </li>-->
+      <!--                    <li>-->
+      <!--                      <label class="check" for="">-->
+      <!--                        <input-->
+      <!--                          class="check__input visually-hidden"-->
+      <!--                          type="checkbox"-->
+      <!--                        />-->
+      <!--                        <span class="check__primary check__box"></span>-->
+      <!--                        Личные медицинские книжки-->
+      <!--                      </label>-->
+      <!--                    </li>-->
+      <!--                  </ul>-->
+      <!-- </div> -->
+      <!--                <div class="elements-between">-->
+      <!--                  <button>Назад</button>-->
+      <!--                  <button class="btn-next">Далее <img src="assets/images/figures/right-white.svg" alt="next"></button>-->
+      <!--                </div>-->
+      <!--              </div>-->
+      <!--            </div>-->
+
+      <!--            <div class="quiz-form">-->
+      <!--              <img-->
+      <!--                class="quiz-form__image"-->
+      <!--                src="assets/images/quiz-3.png"-->
+      <!--                alt="guiz-2"-->
+      <!--              />-->
+      <!--              <div class="quiz-content">-->
+      <!--                <div class="quiz-content__steps">-->
+      <!--                  <ul>-->
+      <!--                    <li>Шаг 1</li>-->
+      <!--                    <li>Шаг 2</li>-->
+      <!--                    <li>Шаг 3</li>-->
+      <!--                    <li>Шаг 4</li>-->
+      <!--                  </ul>-->
+      <!--                </div>-->
+      <!--                <div class="quiz-content__questions">-->
+      <!--                  <span class="quiz-content__number">3</span> Укажите количество-->
+      <!--                  сотрудников, которым нужно провести профосмотр.-->
+      <!--                </div>-->
+      <!--                <textarea-->
+      <!--                  class="quiz-content__text"-->
+      <!--                  placeholder="Введите число"-->
+      <!--                ></textarea>-->
+      <!--                <div class="elements-between">-->
+      <!--                  <button>Назад</button>-->
+      <!--                  <button>Далее</button>-->
+      <!--                </div>-->
+      <!--              </div>-->
+      <!--            </div>-->
+
+      <!--            <div class="quiz-form">-->
+      <!--              <img-->
+      <!--                class="quiz-form__image"-->
+      <!--                src="assets/images/quiz-4.png"-->
+      <!--                alt="guiz-2"-->
+      <!--              />-->
+      <!--              <div class="quiz-content">-->
+      <!--                <div class="quiz-content__steps">-->
+      <!--                  <ul>-->
+      <!--                    <li>Шаг 1</li>-->
+      <!--                    <li>Шаг 2</li>-->
+      <!--                    <li>Шаг 3</li>-->
+      <!--                    <li>Шаг 4</li>-->
+      <!--                  </ul>-->
+      <!--                </div>-->
+      <!--                <div class="quiz-content__questions">-->
+      <!--                  <span class="quiz-content__number">4</span> Вы планируете-->
+      <!--                  пройти профосмотр в одном из наших медцентров или требуется-->
+      <!--                  выездная бригада?-->
+      <!--                </div>-->
+      <!--                <div>-->
+      <!--                  <label class="check" for="med-radio">-->
+      <!--                    <input-->
+      <!--                      id="med-radio"-->
+      <!--                      class="check__input visually-hidden"-->
+      <!--                      type="radio"-->
+      <!--                      name="radio-group"-->
+      <!--                      value="В медцентре"-->
+      <!--                      checked-->
+      <!--                    />-->
+      <!--                    <span class="check__primary check__radio"></span>-->
+      <!--                    В медцентре-->
+      <!--                  </label>-->
+      <!--                  <label class="check" for="need-radio">-->
+      <!--                    <input-->
+      <!--                      id="need-radio"-->
+      <!--                      class="check__input visually-hidden"-->
+      <!--                      type="radio"-->
+      <!--                      name="radio-group"-->
+      <!--                      value="Требуется выездная бригада"-->
+      <!--                    />-->
+      <!--                    <span class="check__primary check__radio"></span>-->
+      <!--                    Требуется выездная бригада-->
+      <!--                  </label>-->
+      <!--                </div>-->
+      <!--                <div class="elements-between">-->
+      <!--                  <button>Назад</button>-->
+      <!--                  <button>Далее</button>-->
+      <!--                </div>-->
+      <!--              </div>-->
+      <!--            </div>-->
+
+      <!--            <div class="quiz-form">-->
+      <!--              <div class="quiz-feedback">-->
+      <!--                <div class="hero-dialog__title">-->
+      <!--                  Введите номер телефона, и мы вышлем вам расчет стоимости-->
+      <!--                  профосмотра и коммерческое предложение-->
+      <!--                </div>-->
+      <!--                <form class="hero-feedback__form">-->
+      <!--                  <input-->
+      <!--                    class="input-primary"-->
+      <!--                    placeholder="Ваш номер телефона"-->
+      <!--                    type="text"-->
+      <!--                  />-->
+      <!--                  <button class="btn-commercial" type="submit">-->
+      <!--                    Получить коммерческое предложение-->
+      <!--                  </button>-->
+      <!--                </form>-->
+      <!--                <div class="">-->
+      <!--                  Передавая информацию сайту, вы принимаете условия-->
+      <!--                  <span class="text-bottom">Политики защиты персональной информации</span>-->
+      <!--                </div>-->
+      <!--              </div>-->
+      <!--            </div>-->
+    </div>
   </body>
 </html>

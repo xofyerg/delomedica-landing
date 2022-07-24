@@ -229,7 +229,6 @@ body {
   height: 44px;
   margin-right: 11px;
   font-size: 15px;
-  font-weight: normal;
 }
 
 .header {
@@ -461,9 +460,18 @@ body {
 .quiz-content__steps ul {
   color: #d5d5d5;
 }
-.quiz-content__questions {
+.quiz-content__question-title {
   font-size: 20px;
   font-weight: bold;
+}
+.quiz-content__body textarea {
+  width: 100%;
+}
+.quiz-content__checks {
+  column-count: 2;
+}
+.quiz-content__checks li {
+  margin-bottom: 6px;
 }
 .quiz-content__text {
   height: 170px;
