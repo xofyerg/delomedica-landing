@@ -2,9 +2,8 @@
   height: 126px;
 
   &__wrap {
+    @extend %container;
     @extend %flex-between;
     align-items: center;
-    @extend %container;
-    height: 100%;
   }
 }

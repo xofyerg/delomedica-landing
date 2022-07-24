@@ -5,11 +5,7 @@
   }
 
   &__logo {
-    background-image: url("assets/images/logo.svg");
-    width: 191px;
-    height: 58px;
-    background-size: 191px 58px;
-    background-repeat: no-repeat;
+    @include icon-mixin(191px, 58px, url("assets/images/logo.svg"), relative);
     margin-right: 20px;
   }
 
@@ -48,7 +44,8 @@
   }
 
   &__services::after {
-    background-image: url("assets/images/figures/down-grey.svg");
-    @extend %icon-margin;
+    @include icon-mixin(10px, 6px, url("assets/images/figures/down-grey.svg"));
+    bottom: 3px;
+    right: -14px;
   }
 }

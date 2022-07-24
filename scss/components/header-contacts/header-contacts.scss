@@ -11,7 +11,9 @@
   }
 
   &__city span::after {
-    background-image: url("assets/images/figures/down-blue.svg");
-    @extend %icon-margin;
+    @include icon-mixin(10px, 6px, url("assets/images/figures/down-blue.svg"));
+    bottom: 3px;
+    right: -14px;
+    //background-image: url("assets/images/figures/down-blue.svg");
   }
 }

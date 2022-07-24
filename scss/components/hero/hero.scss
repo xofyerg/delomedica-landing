@@ -1,6 +1,6 @@
 .hero {
   height: 832px;
-  background: $background;
+  background: $hero-bg;
   position: relative;
 
   &__girl {
@@ -8,11 +8,12 @@
     height: 732px;
     bottom: 0;
     left: 18%;
+    z-index: 20;
   }
 
   &__wrap {
+    @extend %container;
     @extend %flex-between;
     align-items: center;
-    @extend %container;
   }
 }

@@ -11,11 +11,6 @@
   place-items: center;
 }
 
-%flex-col {
-  display: flex;
-  flex-direction: column;
-}
-
 %flex-center {
   display: flex;
   justify-content: center;
@@ -29,15 +24,4 @@
 %flex-between {
   display: flex;
   justify-content: space-between;
-}
-
-%icon-margin {
-  content: "";
-  position: absolute;
-  bottom: 3px;
-  right: -14px;
-  background-repeat: no-repeat;
-  background-size: 10px 6px;
-  width: 10px;
-  height: 6px;
 }
