@@ -18,17 +18,17 @@
   position: relative;
 }
 
-.hero-dialog, .icon-circle {
+.quiz-feedback, .hero-dialog, .icon-circle {
   display: grid;
   place-items: center;
 }
 
-.quiz-content__questions, .quiz__wrap, .header-content__text {
+.quiz-body__questions, .quiz__wrap, .header-content__text {
   display: flex;
   align-items: center;
 }
 
-.quiz-content__steps ul, .hero__wrap, .header__wrap, .elements-between {
+.quiz-body__steps ul, .hero__wrap, .header__wrap, .elements-between {
   display: flex;
   justify-content: space-between;
 }
@@ -98,6 +98,10 @@ a:visited {
 
 a:hover {
   text-decoration: none;
+}
+
+li {
+  list-style: none;
 }
 
 ul li {
@@ -190,6 +194,7 @@ body {
 }
 
 .textarea-primary {
+  width: 100%;
   border: 1px solid #d5d5d5;
   border-radius: 6px;
   padding: 21px;
@@ -436,6 +441,7 @@ body {
 
 .quiz-form {
   display: flex;
+  position: relative;
   height: 480px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
   border-radius: 4px;
@@ -446,40 +452,56 @@ body {
   width: 270px;
 }
 
-.quiz-content {
+.quiz-body {
   display: flex;
   flex-direction: column;
   gap: 36px;
   width: 100%;
-  padding: 30px 45px 0;
+  padding: 30px 45px;
 }
-.quiz-content__steps {
+.quiz-body__steps {
   border-bottom: 1px solid #d5d5d5;
   padding-bottom: 11px;
 }
-.quiz-content__steps ul {
+.quiz-body__steps ul {
   color: #d5d5d5;
 }
-.quiz-content__question-title {
+.quiz-body__question-title {
   font-size: 20px;
   font-weight: bold;
 }
-.quiz-content__body textarea {
-  width: 100%;
+.quiz-body__content {
+  height: 100%;
 }
-.quiz-content__checks {
+.quiz-body__checks {
   column-count: 2;
 }
-.quiz-content__checks li {
+.quiz-body__checks li {
   margin-bottom: 6px;
-}
-.quiz-content__text {
-  height: 170px;
-  border: 1px solid #000000;
 }
 
 .quiz-feedback {
-  width: 100%;
+  position: absolute;
+  background-color: #ffffff;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+.quiz-feedback__form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 330px;
+  margin: auto;
+}
+
+.services-block {
+  display: inline-block;
+  background-color: #ffffff;
+  position: absolute;
+  z-index: 20;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,42 +1,43 @@
-import { questions } from "./modules/data.js";
-import { quizBody } from "./modules/data.js";
+import { quizData, renderServices } from "./modules/data.js";
 
-let page = 1;
+const { images, questions, content } = quizData;
+let quizItem = 1;
 
+const servicesBlock = document.getElementById("services-block");
 const quizForm = document.getElementById("quiz-form");
-const quizImage = quizForm.querySelector("#quiz-form-image");
-const questionTitle = quizForm.querySelector("#question-title");
+
+const quizFeedback = quizForm.querySelector("#quiz-feedback");
+const quizFormImage = quizForm.querySelector("#quiz-form-image");
 const questionNumber = quizForm.querySelector("#question-number");
-const quizFormBody = quizForm.querySelector("#quiz-form-body");
+const questionTitle = quizForm.querySelector("#question-title");
+const quizBodyContent = quizForm.querySelector("#quiz-body-content");
 
-const btnPrev = document.getElementById("btn-quiz-prev");
-const btnNext = document.getElementById("btn-quiz-next");
+const btnQuizPrev = document.getElementById("btn-quiz-prev");
+const btnQuizNext = document.getElementById("btn-quiz-next");
 
-btnPrev.addEventListener("click", prevQuiz);
-btnNext.addEventListener("click", nextQuiz);
+btnQuizPrev.addEventListener("click", () => {
+  quizItem--;
+  renderQuizItem(quizItem);
+});
+btnQuizNext.addEventListener("click", () => {
+  quizItem++;
+  renderQuizItem(quizItem);
+});
 
-function prevQuiz() {
-  page--;
-  quizImage.setAttribute("src", `assets/images/quiz-${page}.png`);
-  questionTitle.innerHTML = questions[page - 1];
-  questionNumber.innerHTML = page;
-  quizFormBody.innerHTML = quizBody[page - 1];
+function renderQuizItem(quizItem) {
+  quizItem > 1
+    ? btnQuizPrev.classList.remove("visually-hidden")
+    : btnQuizPrev.classList.add("visually-hidden");
 
-  if (page === 1) {
-    btnPrev.classList.add("visually-hidden");
+  if (quizItem === 5) {
+    quizFeedback.classList.remove("visually-hidden");
   }
+
+  quizFormImage.setAttribute("src", images[quizItem - 1]);
+  questionNumber.innerHTML = questions[quizItem - 1].number;
+  questionTitle.innerHTML = questions[quizItem - 1].text;
+  quizBodyContent.innerHTML = content[quizItem - 1];
 }
 
-function nextQuiz() {
-  if (page === 1) {
-    btnPrev.classList.remove("visually-hidden");
-  }
-
-  page++;
-  quizImage.setAttribute("src", `assets/images/quiz-${page}.png`);
-  questionTitle.innerHTML = questions[page - 1];
-  questionNumber.innerHTML = page;
-  quizFormBody.innerHTML = quizBody[page - 1];
-}
-
-console.log(quizFormBody);
+servicesBlock.innerHTML = renderServices().join("");
+renderQuizItem(quizItem);

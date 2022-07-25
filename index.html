@@ -49,6 +49,7 @@
       </header>
 
       <div class="hero">
+        <div id="services-block" class="services-block"></div>
         <div class="hero__wrap">
           <img class="hero__girl" src="assets/images/girl.png" alt="girl" />
           <div class="hero-content">
@@ -121,14 +122,40 @@
             </div>
 
             <div id="quiz-form" class="quiz-form">
+              <div id="quiz-feedback" class="quiz-feedback visually-hidden">
+                <div class="quiz-feedback__wrap">
+                  <div class="quiz-feedback__title">
+                    Введите номер телефона, и мы вышлем вам расчет стоимости
+                    профосмотра и коммерческое предложение
+                  </div>
+                  <form class="quiz-feedback__form">
+                    <input
+                      class="input-primary"
+                      placeholder="Ваш номер телефона"
+                      type="text"
+                    />
+                    <button class="btn-commercial" type="submit">
+                      Получить коммерческое предложение
+                    </button>
+
+                    <div class="">
+                      Передавая информацию сайту, вы принимаете условия
+                      <span class="text-bottom"
+                        >Политики защиты персональной информации</span
+                      >
+                    </div>
+                  </form>
+                </div>
+              </div>
+
               <img
                 id="quiz-form-image"
                 class="quiz-form__image"
-                src="assets/images/quiz-1.png"
-                alt="guiz-1"
+                src="#"
+                alt="quiz"
               />
-              <div class="quiz-content">
-                <div class="quiz-content__steps">
+              <div class="quiz-body">
+                <div class="quiz-body__steps">
                   <ul>
                     <li>Шаг 1</li>
                     <li>Шаг 2</li>
@@ -136,25 +163,19 @@
                     <li>Шаг 4</li>
                   </ul>
                 </div>
-                <div class="quiz-content__questions">
+                <div class="quiz-body__questions">
                   <div class="icon-circle">
                     <div
                       id="question-number"
-                      class="quiz-content__question-number"
-                    >
-                      1
-                    </div>
+                      class="quiz-body__question-number"
+                    ></div>
                   </div>
-                  <div id="question-title" class="quiz-content__question-title">
-                    Чем занимается ваша организация?
-                  </div>
+                  <div
+                    id="question-title"
+                    class="quiz-body__question-title"
+                  ></div>
                 </div>
-                <ul id="quiz-form-body" class="quiz-content__checks">
-                  <textarea
-                    class="textarea-primary"
-                    placeholder="Введите ответ"
-                  ></textarea>
-                </ul>
+                <div id="quiz-body-content" class="quiz-body__content"></div>
                 <div class="elements-between">
                   <button id="btn-quiz-prev" class="visually-hidden">
                     Назад
@@ -185,210 +206,33 @@
               стоимость его проведения и вышлем коммерческое предложение
             </div>
 
-            <div class="quiz-form">
-              <img
-                class="quiz-form__image"
-                src="assets/images/quiz-2.png"
-                alt="quiz-2"
-              />
-              <div class="quiz-content">
-                <div class="quiz-content__steps">
-                  <ul>
-                    <li>Шаг 1</li>
-                    <li>Шаг 2</li>
-                    <li>Шаг 3</li>
-                    <li>Шаг 4</li>
-                  </ul>
+            <div id="quiz-form" class="quiz-form">
+              <div id="quiz-feedback" class="quiz-feedback">
+                <div class="hero-dialog__title">
+                  Введите номер телефона, и мы вышлем вам расчет стоимости
+                  профосмотра и коммерческое предложение
                 </div>
-                <div class="quiz-content__questions">
-                  <span class="icon-circle"><div>2</div></span> Укажите вид
-                  необходимой услуги (Можно выбрать несколько вариантов)
-                </div>
-                <div>
-                  <ul id="serv-checks" class="quiz-content__checks">
-                    
-                  </ul>
-                </div>
-                <div class="elements-between">
-                  <button>Назад</button>
-                  <button class="btn-next">
-                    Далее
-                    <img
-                      src="assets/images/figures/right-white.svg"
-                      alt="next"
-                    />
+                <form class="hero-feedback__form">
+                  <input
+                    class="input-primary"
+                    placeholder="Ваш номер телефона"
+                    type="text"
+                  />
+                  <button class="btn-commercial" type="submit">
+                    Получить коммерческое предложение
                   </button>
+                </form>
+                <div class="">
+                  Передавая информацию сайту, вы принимаете условия
+                  <span class="text-bottom"
+                    >Политики защиты персональной информации</span
+                  >
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div> -->
-
-      <!--            <div class="quiz-form">-->
-      <!--              <img-->
-      <!--                class="quiz-form__image"-->
-      <!--                src="assets/images/quiz-2.png"-->
-      <!--                alt="guiz-2"-->
-      <!--              />-->
-      <!--              <div class="quiz-content">-->
-      <!--                <div class="quiz-content__steps">-->
-      <!--                  <ul>-->
-      <!--                    <li>Шаг 1</li>-->
-      <!--                    <li>Шаг 2</li>-->
-      <!--                    <li>Шаг 3</li>-->
-      <!--                    <li>Шаг 4</li>-->
-      <!--                  </ul>-->
-      <!--                </div>-->
-      <!--                <div class="quiz-content__questions">-->
-      <!--                  <span class="quiz-content__number">2</span> Укажите вид-->
-      <!--                  необходимой услуги (Можно выбрать несколько вариантов)-->
-      <!--                </div>-->
-      <!--                <div>-->
-      <!--                  <ul>-->
-      <!--                    <li>-->
-      <!--                      <label class="check" for="">-->
-      <!--                        <input-->
-      <!--                          class="check__input visually-hidden"-->
-      <!--                          type="checkbox"-->
-      <!--                        />-->
-      <!--                        <span class="check__primary check__box"></span>-->
-      <!--                        Предварительный/периодический медицинский осмотр-->
-      <!--                      </label>-->
-      <!--                    </li>-->
-      <!--                    <li>-->
-      <!--                      <label class="check" for="">-->
-      <!--                        <input-->
-      <!--                          class="check__input visually-hidden"-->
-      <!--                          type="checkbox"-->
-      <!--                        />-->
-      <!--                        <span class="check__primary check__box"></span>-->
-      <!--                        Выездной медицинский осмотр (профосмотр)-->
-      <!--                      </label>-->
-      <!--                    </li>-->
-      <!--                    <li>-->
-      <!--                      <label class="check" for="">-->
-      <!--                        <input-->
-      <!--                          class="check__input visually-hidden"-->
-      <!--                          type="checkbox"-->
-      <!--                        />-->
-      <!--                        <span class="check__primary check__box"></span>-->
-      <!--                        Личные медицинские книжки-->
-      <!--                      </label>-->
-      <!--                    </li>-->
-      <!--                  </ul>-->
-      <!-- </div> -->
-      <!--                <div class="elements-between">-->
-      <!--                  <button>Назад</button>-->
-      <!--                  <button class="btn-next">Далее <img src="assets/images/figures/right-white.svg" alt="next"></button>-->
-      <!--                </div>-->
-      <!--              </div>-->
-      <!--            </div>-->
-
-      <!--            <div class="quiz-form">-->
-      <!--              <img-->
-      <!--                class="quiz-form__image"-->
-      <!--                src="assets/images/quiz-3.png"-->
-      <!--                alt="guiz-2"-->
-      <!--              />-->
-      <!--              <div class="quiz-content">-->
-      <!--                <div class="quiz-content__steps">-->
-      <!--                  <ul>-->
-      <!--                    <li>Шаг 1</li>-->
-      <!--                    <li>Шаг 2</li>-->
-      <!--                    <li>Шаг 3</li>-->
-      <!--                    <li>Шаг 4</li>-->
-      <!--                  </ul>-->
-      <!--                </div>-->
-      <!--                <div class="quiz-content__questions">-->
-      <!--                  <span class="quiz-content__number">3</span> Укажите количество-->
-      <!--                  сотрудников, которым нужно провести профосмотр.-->
-      <!--                </div>-->
-      <!--                <textarea-->
-      <!--                  class="quiz-content__text"-->
-      <!--                  placeholder="Введите число"-->
-      <!--                ></textarea>-->
-      <!--                <div class="elements-between">-->
-      <!--                  <button>Назад</button>-->
-      <!--                  <button>Далее</button>-->
-      <!--                </div>-->
-      <!--              </div>-->
-      <!--            </div>-->
-
-      <!--            <div class="quiz-form">-->
-      <!--              <img-->
-      <!--                class="quiz-form__image"-->
-      <!--                src="assets/images/quiz-4.png"-->
-      <!--                alt="guiz-2"-->
-      <!--              />-->
-      <!--              <div class="quiz-content">-->
-      <!--                <div class="quiz-content__steps">-->
-      <!--                  <ul>-->
-      <!--                    <li>Шаг 1</li>-->
-      <!--                    <li>Шаг 2</li>-->
-      <!--                    <li>Шаг 3</li>-->
-      <!--                    <li>Шаг 4</li>-->
-      <!--                  </ul>-->
-      <!--                </div>-->
-      <!--                <div class="quiz-content__questions">-->
-      <!--                  <span class="quiz-content__number">4</span> Вы планируете-->
-      <!--                  пройти профосмотр в одном из наших медцентров или требуется-->
-      <!--                  выездная бригада?-->
-      <!--                </div>-->
-      <!--                <div>-->
-      <!--                  <label class="check" for="med-radio">-->
-      <!--                    <input-->
-      <!--                      id="med-radio"-->
-      <!--                      class="check__input visually-hidden"-->
-      <!--                      type="radio"-->
-      <!--                      name="radio-group"-->
-      <!--                      value="В медцентре"-->
-      <!--                      checked-->
-      <!--                    />-->
-      <!--                    <span class="check__primary check__radio"></span>-->
-      <!--                    В медцентре-->
-      <!--                  </label>-->
-      <!--                  <label class="check" for="need-radio">-->
-      <!--                    <input-->
-      <!--                      id="need-radio"-->
-      <!--                      class="check__input visually-hidden"-->
-      <!--                      type="radio"-->
-      <!--                      name="radio-group"-->
-      <!--                      value="Требуется выездная бригада"-->
-      <!--                    />-->
-      <!--                    <span class="check__primary check__radio"></span>-->
-      <!--                    Требуется выездная бригада-->
-      <!--                  </label>-->
-      <!--                </div>-->
-      <!--                <div class="elements-between">-->
-      <!--                  <button>Назад</button>-->
-      <!--                  <button>Далее</button>-->
-      <!--                </div>-->
-      <!--              </div>-->
-      <!--            </div>-->
-
-      <!--            <div class="quiz-form">-->
-      <!--              <div class="quiz-feedback">-->
-      <!--                <div class="hero-dialog__title">-->
-      <!--                  Введите номер телефона, и мы вышлем вам расчет стоимости-->
-      <!--                  профосмотра и коммерческое предложение-->
-      <!--                </div>-->
-      <!--                <form class="hero-feedback__form">-->
-      <!--                  <input-->
-      <!--                    class="input-primary"-->
-      <!--                    placeholder="Ваш номер телефона"-->
-      <!--                    type="text"-->
-      <!--                  />-->
-      <!--                  <button class="btn-commercial" type="submit">-->
-      <!--                    Получить коммерческое предложение-->
-      <!--                  </button>-->
-      <!--                </form>-->
-      <!--                <div class="">-->
-      <!--                  Передавая информацию сайту, вы принимаете условия-->
-      <!--                  <span class="text-bottom">Политики защиты персональной информации</span>-->
-      <!--                </div>-->
-      <!--              </div>-->
-      <!--            </div>-->
     </div>
   </body>
 </html>

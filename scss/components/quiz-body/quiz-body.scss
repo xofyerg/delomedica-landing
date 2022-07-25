@@ -1,7 +1,7 @@
-.quiz-content {
+.quiz-body {
   @include flex-col(36px);
   width: 100%;
-  padding: 30px 45px 0;
+  padding: 30px 45px;
 
   &__steps {
     border-bottom: 1px solid $light;
@@ -22,8 +22,8 @@
     font-weight: bold;
   }
 
-  &__body textarea {
-    width: 100%;
+  &__content {
+    height: 100%;
   }
 
   &__checks {
@@ -32,10 +32,5 @@
 
   &__checks li {
     margin-bottom: 6px;
-  }
-
-  &__text {
-    height: 170px;
-    border: 1px solid $black;
   }
 }
