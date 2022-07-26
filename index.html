@@ -28,7 +28,7 @@
               <nav>
                 <ul>
                   <li>Подбор профосмотра</li>
-                  <li class="header-content__services">Услуги</li>
+                  <li id="services-btn" class="header-content__services-btn">Услуги</li>
                   <li>О медцентре</li>
                   <li>Галерея</li>
                   <li>Благодарности</li>
@@ -49,7 +49,7 @@
       </header>
 
       <div class="hero">
-        <div id="services-block" class="services-block"></div>
+        <div id="services-block" class="services-block hidden"></div>
         <div class="hero__wrap">
           <img class="hero__girl" src="assets/images/girl.png" alt="girl" />
           <div class="hero-content">
@@ -126,7 +126,7 @@
                 <div class="quiz-feedback__wrap">
                   <div class="quiz-feedback__title">
                     Введите номер телефона, и мы вышлем вам расчет стоимости
-                    профосмотра и коммерческое предложение
+                    профосмотра <br> и коммерческое предложение
                   </div>
                   <form class="quiz-feedback__form">
                     <input
@@ -138,7 +138,7 @@
                       Получить коммерческое предложение
                     </button>
 
-                    <div class="">
+                    <div class="quiz-feedback__bottom">
                       Передавая информацию сайту, вы принимаете условия
                       <span class="text-bottom"
                         >Политики защиты персональной информации</span
@@ -157,35 +157,33 @@
               <div class="quiz-body">
                 <div class="quiz-body__steps">
                   <ul>
-                    <li>Шаг 1</li>
+                    <li class="active-step">Шаг 1</li>
                     <li>Шаг 2</li>
                     <li>Шаг 3</li>
                     <li>Шаг 4</li>
                   </ul>
                 </div>
                 <div class="quiz-body__questions">
-                  <div class="icon-circle">
-                    <div
-                      id="question-number"
-                      class="quiz-body__question-number"
-                    ></div>
+                  <div>
+                    <div class="icon-circle">
+                      <div
+                         id="question-number"
+                         class="quiz-body__question-number">
+                      </div>
+                    </div>
                   </div>
                   <div
                     id="question-title"
-                    class="quiz-body__question-title"
-                  ></div>
+                    class="quiz-body__question-title">
+                  </div>
                 </div>
                 <div id="quiz-body-content" class="quiz-body__content"></div>
                 <div class="elements-between">
-                  <button id="btn-quiz-prev" class="visually-hidden">
-                    Назад
+                  <button id="btn-quiz-prev" class="btn-prev hidden">
+                    <div>Назад</div>
                   </button>
                   <button id="btn-quiz-next" class="btn-next">
-                    Далее
-                    <img
-                      src="assets/images/figures/right-white.svg"
-                      alt="next"
-                    />
+                    <div>Далее</div>
                   </button>
                 </div>
               </div>

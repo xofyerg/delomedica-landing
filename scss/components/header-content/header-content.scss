@@ -38,12 +38,12 @@
     cursor: pointer;
   }
 
-  &__services {
+  &__services-btn {
     position: relative;
     margin-right: 1em;
   }
 
-  &__services::after {
+  &__services-btn::after {
     @include icon-mixin(10px, 6px, url("assets/images/figures/down-grey.svg"));
     bottom: 3px;
     right: -14px;

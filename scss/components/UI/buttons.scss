@@ -1,3 +1,23 @@
+.btn-prev {
+  position: relative;
+  background-color: transparent;
+  border-radius: 6px;
+  height: 43px;
+  font-size: 14px;
+  @extend %grid-place-center;
+
+  div {
+    position: absolute;
+    left: 35px;
+  }
+
+  div::before {
+    @include icon-mixin(24px, 7px, url("assets/images/figures/left-blue.png"));
+    top: 5px;
+    right: 52px;
+  }
+}
+
 .btn-next {
   position: relative;
   background-color: $primary;
@@ -5,13 +25,18 @@
   width: 140px;
   height: 43px;
   color: $white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 11px;
+  font-size: 14px;
+  @extend %grid-place-center;
 
-  > img {
-    margin-top: 2px;
+  div {
+    position: absolute;
+    left: 27px;
+  }
+
+  div::after {
+    @include icon-mixin(28px, 10px, url("assets/images/figures/right-white.svg"));
+    top: 4px;
+    left: 52px;
   }
 }
 

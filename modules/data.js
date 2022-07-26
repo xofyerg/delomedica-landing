@@ -1,9 +1,3 @@
-// import quiz_1 from "../assets/images/quiz-1.png";
-// import quiz_2 from "../assets/images/quiz-2.png";
-// import quiz_3 from "../assets/images/quiz-3.png";
-// import quiz_4 from "../assets/images/quiz-4.png";
-// import { renderServices } from "./templates.js";
-
 export const services = [
   "Предварительный/периодический медицинский осмотр",
   "Выездной медициский осмотр (профосмотр)",
@@ -30,11 +24,11 @@ export const quizData = {
     { number: 1, text: "Чем занимается ваша организация?" },
     {
       number: 2,
-      text: "Укажите вид необходимой услуги (Можно выбрать несколько вариантов)",
+      text: `Укажите вид необходимой услуги <br> (Можно выбрать несколько вариантов)`,
     },
     {
       number: 3,
-      text: "Укажите количество сотрудников, которым нужно провести профосмотр",
+      text: `Укажите количество сотрудников, которым нужно <br> провести профосмотр`,
     },
     {
       number: 4,
@@ -43,7 +37,7 @@ export const quizData = {
   ],
   content: [
     quizStepOne(),
-    quizStepTwo().join(""),
+    quizStepTwo(),
     quizStepThree(),
     quizStepFour(),
   ],
@@ -59,7 +53,7 @@ function quizStepOne() {
 }
 
 function quizStepTwo() {
-  return services.map(
+  const serviceItem = services.map(
     (service, index) =>
       `
         <li>
@@ -75,7 +69,13 @@ function quizStepTwo() {
           </label>
         </li>
       `
-  );
+  ).join("");
+
+  return `
+    <ul class="quiz-body__checks">
+        ${serviceItem}
+    </ul>
+  `
 }
 
 function quizStepThree() {
@@ -89,32 +89,37 @@ function quizStepThree() {
 
 function quizStepFour() {
   return `
-    <label class="check" for="med-radio">
-      <input
-        id="med-radio"
-        class="check__input visually-hidden"
-        type="radio"
-        name="radio-group"
-        value="В медцентре"
-        checked
-      />
-      <span class="check__primary check__radio"></span>
-      В медцентре
-    </label>
-    <label class="check" for="need-radio">
-      <input
-        id="need-radio"
-        class="check__input visually-hidden"
-        type="radio"
-        name="radio-group"
-        value="Требуется выездная бригада"
-      />
-      <span class="check__primary check__radio"></span>
-      Требуется выездная бригада
-    </label>
+    <div class="">
+      <label class="check" for="med-radio">
+        <input
+          id="med-radio"
+          class="check__input visually-hidden"
+          type="radio"
+          name="radio-group"
+          value="В медцентре"
+          checked
+        />
+        <span class="check__primary check__radio"></span>
+        В медцентре
+      </label>
+      <label class="check" for="need-radio">
+        <input
+          id="need-radio"
+          class="check__input visually-hidden"
+          type="radio"
+          name="radio-group"
+          value="Требуется выездная бригада"
+        />
+        <span class="check__primary check__radio"></span>
+        Требуется выездная бригада
+      </label>
+    </div>
   `;
 }
 
 export function renderServices() {
-  return services.map((service) => `<li>${service}</li>`);
+  const serviceItem = services.map((service) => `<li>${service}</li>`).join("");
+  return `
+    <ul>${serviceItem}</ul>
+  `
 }

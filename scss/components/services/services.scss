@@ -1,9 +1,16 @@
 .services-block {
-  display: inline-block;
+  //display: inline-block;
   background-color: $white;
   position: absolute;
   z-index: 20;
+  padding: 24px 40px;
 
-  li {
+  ul {
+    @include flex-col(23px);
+  }
+
+  ul li {
+    color: $md-grey;
+    cursor: pointer;
   }
 }
