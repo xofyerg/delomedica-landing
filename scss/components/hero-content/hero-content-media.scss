@@ -1,0 +1,22 @@
+@include mobile() {
+  .hero-content {
+    &__title {
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: bold;
+    }
+
+    &__title span {
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    &__bottom {
+      display: none;
+    }
+
+    .btn-commercial {
+      display: inline;
+    }
+  }
+}

@@ -1,27 +1,26 @@
-.btn-prev {
+.btn-primary {
   position: relative;
-  background-color: transparent;
   border-radius: 6px;
-  padding-left: 60px;
-  height: 43px;
   font-size: 14px;
+  height: 43px;
+}
+
+.btn-prev {
+  background-color: transparent;
+  padding-left: 40px;
   justify-self: start;
 
   &::before {
     @include icon-mixin(24px, 7px, url("assets/images/figures/left-blue.png"));
     top: 19px;
-    left: 23px;
+    left: 2px;
   }
 }
 
 .btn-next {
-  position: relative;
   background-color: $primary;
-  border-radius: 6px;
-  padding: 0 95px 0 30px;
-  height: 43px;
+  padding: 0 70px 0 28px;
   color: $white;
-  font-size: 14px;
   justify-self: end;
 
   &::after {
@@ -31,16 +30,23 @@
       url("assets/images/figures/right-white.svg")
     );
     top: 18px;
-    right: 50px;
+    right: 33px;
   }
 }
 
 .btn-commercial {
-  height: 60px;
+  height: 57px;
   background-color: $primary;
-  font-size: 15px;
+  font-size: 14px;
   border-radius: 6px;
   color: $white;
-  font-family: Roboto-Regular, sans-serif;
+  font-family: $button-font;
   font-weight: 300;
+}
+
+.btn-cancel {
+  @include icon-mixin(12px, 12px, url("assets/images/cancel.svg"));
+  top: 21px;
+  right: 21px;
+  cursor: pointer;
 }

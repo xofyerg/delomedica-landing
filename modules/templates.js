@@ -1,14 +1,28 @@
 import { services } from "./data.js";
+import { quizData } from "./data.js";
 
 // ---------- Services ---------- //
 export const renderServices = () => {
-  const serviceItem = services.map((service) => `<li>${service}</li>`).join("");
+  const serviceItems = services.map((service) => `<li>${service}</li>`).join("");
   return `
-      <ul>${serviceItem}</ul>
+      <ul>${serviceItems}</ul>
     `;
 };
 
 // ---------- QUIZ ---------- //
+export const renderSteps = (quizItem) => {
+  const stepItems = quizData.steps
+    .map(
+      (step, index) =>
+        `<li class=${index + 1 === quizItem && "active-step"}>${step}</li>`
+    )
+    .join("");
+
+  return `
+        <ul>${stepItems}</ul>
+    `;
+};
+
 export const renderStepOne = () => {
   return `
       <textarea
@@ -19,7 +33,7 @@ export const renderStepOne = () => {
 };
 
 export const renderStepTwo = () => {
-  const serviceItem = services
+  const serviceItems = services
     .map(
       (service, index) =>
         `
@@ -41,7 +55,7 @@ export const renderStepTwo = () => {
 
   return `
       <ul class="quiz-body__checks">
-          ${serviceItem}
+          ${serviceItems}
       </ul>
     `;
 };

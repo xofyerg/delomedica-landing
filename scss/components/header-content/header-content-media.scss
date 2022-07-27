@@ -1,0 +1,42 @@
+@include desktop() {
+  .header-content {
+    &__links ul {
+      gap: 14px;
+    }
+  }
+}
+
+@include laptop() {
+  .header-content {
+    &__links ul {
+      gap: 12px;
+      font-size: 11px;
+    }
+  }
+}
+
+@include tablet() {
+  .header-content {
+    &__links ul {
+      gap: 10px;
+      font-size: 10px;
+    }
+  }
+}
+
+@include mobile() {
+  .header-content {
+    &__links ul {
+      display: none;
+    }
+
+    &__logo {
+      @include icon-mixin(113px, 34px, url("assets/images/logo.svg"));
+      top: 19px;
+    }
+
+    &__text {
+      display: none;
+    }
+  }
+}

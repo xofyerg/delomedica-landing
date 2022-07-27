@@ -27,6 +27,7 @@ export const quizData = {
     "assets/images/quiz-3.png",
     "assets/images/quiz-4.png",
   ],
+  steps: ["Шаг 1", "Шаг 2", "Шаг 3", "Шаг 4"],
   questions: [
     { number: 1, text: "Чем занимается ваша организация?" },
     {
@@ -49,10 +50,3 @@ export const quizData = {
     renderStepFour(),
   ],
 };
-
-// export function renderServices() {
-//   const serviceItem = services.map((service) => `<li>${service}</li>`).join("");
-//   return `
-//     <ul>${serviceItem}</ul>
-//   `;
-// }

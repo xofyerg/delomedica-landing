@@ -12,11 +12,4 @@
   &__form {
     @include flex-col(12px);
   }
-
-  &__bottom {
-    text-align: center;
-    font-size: 12px;
-    margin-top: 29px;
-    line-height: 15px;
-  }
 }

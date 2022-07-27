@@ -1,9 +1,15 @@
 .header {
-  height: 126px;
+  padding: 20px 0 25px;
 
   &__wrap {
     @extend %container;
     @extend %flex-between;
     align-items: center;
+  }
+
+  &__burger {
+    @include icon-mixin(25px, 18px, url("assets/images/burger.svg"), relative);
+    display: none;
+    cursor: pointer;
   }
 }

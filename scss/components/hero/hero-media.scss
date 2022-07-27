@@ -1,0 +1,21 @@
+@include desktop() {
+  .hero {
+    height: 1000px;
+
+    &__girl {
+      display: none;
+    }
+
+    &__wrap {
+      justify-content: center;
+      flex-direction: column;
+      gap: 35px;
+    }
+  }
+}
+
+@include mobile() {
+  .hero {
+    height: 532px;
+  }
+}

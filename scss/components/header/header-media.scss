@@ -1,0 +1,26 @@
+@include tablet() {
+  .header {
+    padding: 0 0 0 23px;
+
+    &__wrap {
+      display: inline;
+    }
+  }
+}
+
+@include mobile() {
+  .header {
+    height: 69px;
+    padding: 0 19px;
+
+    &__wrap {
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+    }
+
+    &__burger {
+      display: inline;
+    }
+  }
+}

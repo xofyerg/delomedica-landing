@@ -24,7 +24,8 @@
   }
 
   &__check::before {
-    @include icon-mixin(45px, 39px, url("assets/images/check.svg"));
+    @include icon-mixin(43px, 37px, url("assets/images/check.svg"));
+    top: 5px;
     left: -60px;
   }
 
@@ -35,8 +36,14 @@
   }
 
   &__calendar::before {
-    @include icon-mixin(45px, 39px, url("assets/images/calendar.svg"));
+    @include icon-mixin(40px, 43px, url("assets/images/calendar.svg"));
     top: -7px;
     left: -58px;
+  }
+
+  &__bottom {
+    color: $primary;
+    text-decoration-line: underline;
+    cursor: pointer;
   }
 }

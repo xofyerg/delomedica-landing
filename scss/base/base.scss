@@ -1,11 +1,7 @@
 body {
-  font-family: GothamPro, sans-serif;
+  font-family: $default-font;
   font-size: 14px;
 }
-
-//.elements-between {
-//  @extend %flex-between;
-//}
 
 .visually-hidden {
   position: absolute;
@@ -23,7 +19,14 @@ body {
 }
 
 .text-bottom {
-  color: $primary;
-  text-decoration-line: underline;
-  cursor: pointer;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 29px;
+  line-height: 15px;
+
+  span {
+    color: $primary;
+    text-decoration-line: underline;
+    cursor: pointer;
+  }
 }
