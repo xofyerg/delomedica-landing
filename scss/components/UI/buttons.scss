@@ -4,7 +4,8 @@
   border-radius: 6px;
   height: 43px;
   font-size: 14px;
-  @extend %grid-place-center;
+  justify-self: start;
+  //@extend %grid-place-center;
 
   div {
     position: absolute;
@@ -26,7 +27,8 @@
   height: 43px;
   color: $white;
   font-size: 14px;
-  @extend %grid-place-center;
+  justify-self: end;
+  //@extend %grid-place-center;
 
   div {
     position: absolute;

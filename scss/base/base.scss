@@ -3,10 +3,9 @@ body {
   font-size: 14px;
 }
 
-.elements-between {
-  @extend %flex-between;
-  justify-self: end;
-}
+//.elements-between {
+//  @extend %flex-between;
+//}
 
 .visually-hidden {
   position: absolute;
