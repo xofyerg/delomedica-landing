@@ -1,7 +1,8 @@
 .quiz-body {
   @include flex-col(35px);
+  position: relative;
   width: 100%;
-  padding: 30px 45px 62px;
+  padding: 30px 45px 0;
 
   &__steps {
     border-bottom: 1px solid $light;
@@ -32,7 +33,10 @@
   &__btns {
     display: grid;
     grid-template-columns: 1fr 0;
-    grid-template-rows: 1fr;
+    position: absolute;
+    right: 45px;
+    bottom: 60px;
+    left: 45px;
   }
 
   &__checks {

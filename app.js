@@ -1,4 +1,5 @@
-import { quizData, renderServices } from "./modules/data.js";
+import { quizData } from "./modules/data.js";
+import { renderServices } from "./modules/templates.js";
 
 const { images, questions, content } = quizData;
 
@@ -14,7 +15,7 @@ const questionNumber = quizForm.querySelector("#question-number");
 const questionTitle = quizForm.querySelector("#question-title");
 const quizBodyContent = quizForm.querySelector("#quiz-body-content");
 
-const servicesBtn = document.getElementById("services-btn")
+const servicesBtn = document.getElementById("services-btn");
 const btnQuizPrev = document.getElementById("btn-quiz-prev");
 const btnQuizNext = document.getElementById("btn-quiz-next");
 
@@ -22,9 +23,9 @@ servicesBtn.addEventListener("click", () => {
   servicesToggle = !servicesToggle;
 
   servicesToggle
-      ? servicesBlock.classList.remove("hidden")
-      : servicesBlock.classList.add("hidden")
-})
+    ? servicesBlock.classList.remove("hidden")
+    : servicesBlock.classList.add("hidden");
+});
 btnQuizPrev.addEventListener("click", () => {
   quizItem--;
   renderQuizItem(quizItem);

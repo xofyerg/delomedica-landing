@@ -220,15 +220,12 @@ body {
   position: relative;
   background-color: transparent;
   border-radius: 6px;
+  padding-left: 60px;
   height: 43px;
   font-size: 14px;
   justify-self: start;
 }
-.btn-prev div {
-  position: absolute;
-  left: 35px;
-}
-.btn-prev div::before {
+.btn-prev::before {
   content: "";
   position: absolute;
   background-repeat: no-repeat;
@@ -236,25 +233,21 @@ body {
   width: 24px;
   height: 7px;
   background-image: url("assets/images/figures/left-blue.png");
-  top: 5px;
-  right: 52px;
+  top: 19px;
+  left: 23px;
 }
 
 .btn-next {
   position: relative;
   background-color: #009fe3;
   border-radius: 6px;
-  width: 140px;
+  padding: 0 95px 0 30px;
   height: 43px;
   color: #ffffff;
   font-size: 14px;
   justify-self: end;
 }
-.btn-next div {
-  position: absolute;
-  left: 27px;
-}
-.btn-next div::after {
+.btn-next::after {
   content: "";
   position: absolute;
   background-repeat: no-repeat;
@@ -262,8 +255,8 @@ body {
   width: 28px;
   height: 10px;
   background-image: url("assets/images/figures/right-white.svg");
-  top: 4px;
-  left: 52px;
+  top: 18px;
+  right: 50px;
 }
 
 .btn-commercial {
@@ -506,8 +499,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 35px;
+  position: relative;
   width: 100%;
-  padding: 30px 45px 62px;
+  padding: 30px 45px 0;
 }
 .quiz-body__steps {
   border-bottom: 1px solid #d5d5d5;
@@ -528,7 +522,10 @@ body {
 .quiz-body__btns {
   display: grid;
   grid-template-columns: 1fr 0;
-  grid-template-rows: 1fr;
+  position: absolute;
+  right: 45px;
+  bottom: 60px;
+  left: 45px;
 }
 .quiz-body__checks {
   column-count: 2;

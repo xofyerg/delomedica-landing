@@ -2,20 +2,15 @@
   position: relative;
   background-color: transparent;
   border-radius: 6px;
+  padding-left: 60px;
   height: 43px;
   font-size: 14px;
   justify-self: start;
-  //@extend %grid-place-center;
 
-  div {
-    position: absolute;
-    left: 35px;
-  }
-
-  div::before {
+  &::before {
     @include icon-mixin(24px, 7px, url("assets/images/figures/left-blue.png"));
-    top: 5px;
-    right: 52px;
+    top: 19px;
+    left: 23px;
   }
 }
 
@@ -23,22 +18,20 @@
   position: relative;
   background-color: $primary;
   border-radius: 6px;
-  width: 140px;
+  padding: 0 95px 0 30px;
   height: 43px;
   color: $white;
   font-size: 14px;
   justify-self: end;
-  //@extend %grid-place-center;
 
-  div {
-    position: absolute;
-    left: 27px;
-  }
-
-  div::after {
-    @include icon-mixin(28px, 10px, url("assets/images/figures/right-white.svg"));
-    top: 4px;
-    left: 52px;
+  &::after {
+    @include icon-mixin(
+      28px,
+      10px,
+      url("assets/images/figures/right-white.svg")
+    );
+    top: 18px;
+    right: 50px;
   }
 }
 
