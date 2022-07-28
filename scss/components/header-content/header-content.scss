@@ -45,16 +45,4 @@
     display: flex;
     cursor: pointer;
   }
-
-  &__services-arrow-down {
-    @include icon-mixin(10px, 6px, url("assets/images/figures/down-grey.svg"));
-    bottom: 3px;
-    right: -14px;
-  }
-
-  &__services-arrow-up {
-    @include icon-mixin(10px, 6px, url("assets/images/figures/up-black.svg"));
-    bottom: 4px;
-    right: -14px;
-  }
 }

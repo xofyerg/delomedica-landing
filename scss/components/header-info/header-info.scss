@@ -1,0 +1,50 @@
+.header-info {
+  transform: translateX(-100%);
+  position: fixed;
+  top: 69px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $white;
+  z-index: 30;
+  padding: 20px 24px;
+
+  &__services-btn {
+    position: relative;
+    cursor: pointer;
+
+    .services-open {
+      left: 53px;
+    }
+
+    .services-close {
+      //left: 53px;
+    }
+  }
+
+  &__contacts {
+    @include flex-col(17px);
+    margin: 28px 0;
+  }
+
+  &__city span {
+    color: $primary;
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__city span::after {
+    @include icon-mixin(10px, 6px, url("assets/images/figures/down-blue.svg"));
+    bottom: 3px;
+    right: -14px;
+  }
+
+  &__links {
+    margin-top: 40px;
+    position: relative;
+  }
+
+  &__links ul {
+    @include flex-col(17px);
+  }
+}

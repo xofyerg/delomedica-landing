@@ -45,8 +45,17 @@
 }
 
 .btn-cancel {
-  @include icon-mixin(12px, 12px, url("assets/images/cancel.svg"));
-  top: 21px;
-  right: 21px;
+  @include icon-mixin(13px, 13px, url("assets/images/cancel.svg"));
   cursor: pointer;
+  display: none;
+}
+
+.btn-dialog-cancel {
+  top: 18px;
+  right: 18px;
+}
+
+.btn-header-cancel {
+  top: 21px;
+  right: 0;
 }

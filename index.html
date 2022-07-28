@@ -28,9 +28,9 @@
               <nav>
                 <ul>
                   <li>Подбор профосмотра</li>
-                  <div id="services-btn" class="header-content__services-btn">
+                  <div class="header-content__services-btn">
                     Услуги
-                    <div class="header-content__services-arrow-down"></div>
+                    <div class="services-open"></div>
                   </div>
                   <li>О медцентре</li>
                   <li>Галерея</li>
@@ -53,7 +53,39 @@
       </header>
 
       <div class="hero">
-        <div id="services-block" class="services-block hidden"></div>
+<!--        <div id="services-block" class="services-block hidden"></div>-->
+
+        <div id="header-info" class="header-info">
+          <div class="line-bottom"></div>
+          <div class="header-info__contacts">
+            <div class="header-info__email">prof@diamed.group</div>
+            <div class="header-info__city">
+              Ваш город: <span>Королев</span>
+            </div>
+          </div>
+          <div class="line-bottom"></div>
+          <div class="header-info__links">
+            <nav>
+              <ul>
+                <li>Подбор профосмотра</li>
+                <div id="services-btn" class="header-info__services-btn">
+                  Услуги
+                  <div class="services-open"></div>
+                </div>
+                <div class="services-block hidden"></div>
+                <div id="services-block" class="services-block hidden"></div>
+                <div style="transform: translateY(480px); display: flex; flex-direction: column; gap: 17px;">
+                  <li>О медцентре</li>
+                  <li>Галерея</li>
+                  <li>Благодарности</li>
+                  <li>Лицензии</li>
+                  <li>Контакты</li>
+                </div>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
         <div class="hero__wrap">
           <img class="hero__girl" src="assets/images/girl.png" alt="girl" />
           <div class="hero-content">
@@ -83,15 +115,12 @@
               </li>
             </ul>
             <div class="hero-content__bottom">Подобрать профосмотр</div>
-            <button
-              id="hero-content-open"
-              class="btn-commercial hidden"
-              type="submit"
-            >
+            <button id="open-modal" class="btn-commercial" type="submit">
               Получить коммерческое предложение
             </button>
           </div>
-          <div class="hero-dialog">
+          <div id="hero-dialog" class="hero-dialog">
+            <div id="close-modal" class="btn-cancel btn-dialog-cancel"></div>
             <div class="hero-dialog__wrap">
               <div class="hero-dialog__title">
                 Оставьте заявку, и мы предоставим полный план профосмотра <br />
@@ -116,34 +145,6 @@
                   информации</span
                 >
               </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="hero-dialog-modal" class="hero-dialog-modal hidden">
-          <div id="hero-btn-cancel" class="btn-cancel"></div>
-          <div class="hero-dialog__wrap">
-            <div class="hero-dialog__title">
-              Оставьте заявку, и мы предоставим полный план профосмотра <br />
-              с расчетом итоговой стоимости, подходящий именно вашей организации
-            </div>
-            <form class="hero-dialog__form">
-              <input
-                class="input-primary"
-                placeholder="Ваш номер телефона"
-                type="text"
-              />
-              <button class="btn-commercial" type="submit">
-                Получить коммерческое предложение
-              </button>
-            </form>
-            <div class="text-bottom">
-              Передавая информацию сайту, вы <br />
-              принимаете условия <br />
-              <span
-                >Политики защиты персональной <br />
-                информации</span
-              >
             </div>
           </div>
         </div>
@@ -178,7 +179,6 @@
                     <button class="btn-commercial" type="submit">
                       Получить коммерческое предложение
                     </button>
-
                     <div class="text-bottom">
                       Передавая информацию сайту, вы принимаете условия
                       <span>Политики защиты персональной информации</span>
@@ -189,7 +189,7 @@
 
               <img class="quiz-form__image" src="#" alt="quiz" />
               <div class="quiz-body">
-                <div class="quiz-body__steps"></div>
+                <div class="quiz-body__steps line-bottom"></div>
                 <div class="quiz-body__questions">
                   <div>
                     <div class="icon-circle">

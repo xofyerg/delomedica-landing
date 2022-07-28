@@ -1,11 +1,12 @@
 .services-block {
-  background-color: $white;
+  //background-color: $white;
   position: absolute;
-  z-index: 30;
-  padding: 24px 40px;
+  z-index: 0;
+  padding-left: 40px;
 
   ul {
     @include flex-col(23px);
+    margin-top: 67px;
   }
 
   ul li {

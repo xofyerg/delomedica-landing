@@ -3,10 +3,16 @@ import { quizData } from "./data.js";
 
 // ---------- Services ---------- //
 export const renderServices = () => {
-  const serviceItems = services.map((service) => `<li>${service}</li>`).join("");
+  const serviceItems = services
+    .map((service, index) => {
+      if (index !== 1 && index !== 11) {
+        return `<li>${service}</li>`;
+      }
+    })
+    .join("");
   return `
-      <ul>${serviceItems}</ul>
-    `;
+     <ul>${serviceItems}</ul>
+  `;
 };
 
 // ---------- QUIZ ---------- //
@@ -19,17 +25,17 @@ export const renderSteps = (quizItem) => {
     .join("");
 
   return `
-        <ul>${stepItems}</ul>
-    `;
+    <ul>${stepItems}</ul>
+  `;
 };
 
 export const renderStepOne = () => {
   return `
-      <textarea
-        class="textarea-primary"
-        placeholder="Введите ответ"
-      ></textarea>
-    `;
+    <textarea
+      class="textarea-primary"
+      placeholder="Введите ответ"
+    ></textarea>
+  `;
 };
 
 export const renderStepTwo = () => {
@@ -54,47 +60,47 @@ export const renderStepTwo = () => {
     .join("");
 
   return `
-      <ul class="quiz-body__checks">
-          ${serviceItems}
-      </ul>
-    `;
+    <ul class="quiz-body__checks">
+      ${serviceItems}
+    </ul>
+  `;
 };
 
 export const renderStepThree = () => {
   return `
-      <textarea
-        class="textarea-primary"
-        placeholder="Введите число"
-      ></textarea>
-    `;
+    <textarea
+      class="textarea-primary"
+      placeholder="Введите число"
+    ></textarea>
+  `;
 };
 
 export const renderStepFour = () => {
   return `
-          <div class="">
-            <label class="check" for="med-radio">
-              <input
-                id="med-radio"
-                class="check__input visually-hidden"
-                type="radio"
-                name="radio-group"
-                value="В медцентре"
-                checked
-              />
-              <span class="check__primary check__radio"></span>
-              В медцентре
-            </label>
-            <label class="check" for="need-radio">
-              <input
-                id="need-radio"
-                class="check__input visually-hidden"
-                type="radio"
-                name="radio-group"
-                value="Требуется выездная бригада"
-              />
-              <span class="check__primary check__radio"></span>
-              Требуется выездная бригада
-            </label>
-          </div>
-        `;
+    <div class="">
+      <label class="check" for="med-radio">
+        <input
+          id="med-radio"
+          class="check__input visually-hidden"
+          type="radio"
+          name="radio-group"
+          value="В медцентре"
+          checked
+        />
+        <span class="check__primary check__radio"></span>
+        В медцентре
+      </label>
+      <label class="check" for="need-radio">
+        <input
+          id="need-radio"
+          class="check__input visually-hidden"
+          type="radio"
+          name="radio-group"
+          value="Требуется выездная бригада"
+        />
+        <span class="check__primary check__radio"></span>
+        Требуется выездная бригада
+      </label>
+    </div>
+  `;
 };

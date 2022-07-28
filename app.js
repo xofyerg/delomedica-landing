@@ -2,98 +2,86 @@ import { quizData } from "./modules/data.js";
 import { renderServices, renderSteps } from "./modules/templates.js";
 
 const { images, questions, content } = quizData;
-
-let headerToggle = false;
-let servicesToggle = false;
-let quizItem = 1;
+let quizPage = 1;
 
 // ---------- get dom ---------- //
-const headerBurger = document.querySelector(".header__burger");
+const body = document.body;
+const headerInfo = document.querySelector(".header-info");
+const openLinksBtn = document.querySelector(".header__burger");
 
-const servicesBlock = document.getElementById("services-block");
+const openServicesBtn = document.getElementById("services-btn");
+const servicesArrow = openServicesBtn.querySelector(".services-open");
+const servicesBlock = document.querySelector(".services-block");
 
-const heroDialogModal = document.getElementById("hero-dialog-modal");
-const heroBtnCancel = heroDialogModal.querySelector("#hero-btn-cancel");
-
-const heroContentOpen = document.getElementById("hero-content-open");
+const heroDialog = document.getElementById("hero-dialog");
+const openModalBtn = document.getElementById("open-modal");
+const closeModalBtn = heroDialog.querySelector("#close-modal");
 
 const quizForm = document.getElementById("quiz-form");
-
 const quizFeedback = quizForm.querySelector(".quiz-feedback");
 const quizFormImage = quizForm.querySelector(".quiz-form__image");
 const quizBodySteps = quizForm.querySelector(".quiz-body__steps");
 const questionNumber = quizForm.querySelector(".quiz-body__question-number");
 const questionTitle = quizForm.querySelector(".quiz-body__question-title");
 const quizBodyContent = quizForm.querySelector(".quiz-body__content");
-
-const servicesBtn = document.getElementById("services-btn");
-const servicesArrow = servicesBtn.querySelector(
-  ".header-content__services-arrow-down"
-);
-
-const btnQuizPrev = document.getElementById("btn-quiz-prev");
-const btnQuizNext = document.getElementById("btn-quiz-next");
+const btnQuizPrev = quizForm.querySelector(".btn-prev");
+const btnQuizNext = quizForm.querySelector(".btn-next");
 
 // ---------- listeners ---------- //
-headerBurger.addEventListener("click", () => {
-  headerToggle = !headerToggle;
+openLinksBtn.addEventListener("click", () => {
+  openLinksBtn.classList.toggle("header__burger");
+  openLinksBtn.classList.toggle("btn-cancel");
+  openLinksBtn.classList.toggle("btn-header-cancel");
 
-  if (headerToggle) {
-    headerBurger.classList.remove("header__burger", "hidden");
-    headerBurger.classList.add("btn-cancel");
+  headerInfo.classList.toggle("open");
+  body.classList.toggle("hide-scroll");
+});
+openServicesBtn.addEventListener("click", () => {
+  servicesBlock.classList.toggle("hidden");
+
+  if (servicesArrow.classList.contains("services-open")) {
+    servicesArrow.classList.remove("services-open");
+    servicesArrow.classList.add("services-close");
   } else {
-    headerBurger.classList.add("header__burger");
-    headerBurger.classList.remove("btn-cancel");
+    servicesArrow.classList.add("services-open");
+    servicesArrow.classList.remove("services-close");
   }
 });
-servicesBtn.addEventListener("click", () => {
-  servicesToggle = !servicesToggle;
-
-  if (servicesToggle) {
-    servicesBlock.classList.remove("hidden");
-
-    servicesArrow.classList.remove("header-content__services-arrow-down");
-    servicesArrow.classList.add("header-content__services-arrow-up");
-  } else {
-    servicesBlock.classList.add("hidden");
-
-    servicesArrow.classList.add("header-content__services-arrow-down");
-    servicesArrow.classList.remove("header-content__services-arrow-up");
-  }
+openModalBtn.addEventListener("click", () => {
+  heroDialog.classList.add("open");
+  body.classList.add("hide-scroll");
 });
-heroContentOpen.addEventListener("click", () => {
-  heroDialogModal.classList.remove("hidden");
-});
-heroBtnCancel.addEventListener("click", () => {
-  heroDialogModal.classList.add("hidden");
+closeModalBtn.addEventListener("click", () => {
+  heroDialog.classList.remove("open");
+  body.classList.remove("hide-scroll");
 });
 btnQuizPrev.addEventListener("click", () => {
-  quizItem--;
-  renderQuizItem(quizItem);
+  quizPage--;
+  renderQuiz(quizPage);
 });
 btnQuizNext.addEventListener("click", () => {
-  quizItem++;
-  renderQuizItem(quizItem);
+  quizPage++;
+  renderQuiz(quizPage);
 });
 
 // ---------- main renders ---------- //
-function renderQuizItem(quizItem) {
-  quizBodySteps.innerHTML = renderSteps(quizItem);
+function renderQuiz(quizPage) {
+  quizBodySteps.innerHTML = renderSteps(quizPage);
 
-  quizItem > 1
+  quizPage > 1
     ? btnQuizPrev.classList.remove("hidden")
     : btnQuizPrev.classList.add("hidden");
 
-  if (quizItem === 5) {
+  if (quizPage === 5) {
     quizFeedback.classList.remove("visually-hidden");
     return;
   }
 
-  quizFormImage.setAttribute("src", images[quizItem - 1]);
-  questionNumber.innerHTML = questions[quizItem - 1].number;
-  questionTitle.innerHTML = questions[quizItem - 1].text;
-  quizBodyContent.innerHTML = content[quizItem - 1];
+  quizFormImage.setAttribute("src", images[quizPage - 1]);
+  questionNumber.innerHTML = questions[quizPage - 1].number;
+  questionTitle.innerHTML = questions[quizPage - 1].text;
+  quizBodyContent.innerHTML = content[quizPage - 1];
 }
 
 servicesBlock.innerHTML = renderServices();
-renderQuizItem(quizItem);
+renderQuiz(quizPage);

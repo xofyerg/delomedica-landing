@@ -1,3 +1,15 @@
+.services-open {
+  @include icon-mixin(10px, 6px, url("assets/images/figures/down-grey.svg"));
+  bottom: 3px;
+  right: -14px;
+}
+
+.services-close {
+  @include icon-mixin(10px, 6px, url("assets/images/figures/up-black.svg"));
+  bottom: 4px;
+  right: -14px;
+}
+
 .icon-circle {
   @extend %grid-place-center;
   border: 2px solid $primary;
