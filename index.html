@@ -53,36 +53,27 @@
       </header>
 
       <div class="hero">
-<!--        <div id="services-block" class="services-block hidden"></div>-->
-
         <div id="header-info" class="header-info">
           <div class="line-bottom"></div>
           <div class="header-info__contacts">
             <div class="header-info__email">prof@diamed.group</div>
-            <div class="header-info__city">
-              Ваш город: <span>Королев</span>
-            </div>
+            <div class="header-info__city">Ваш город: <span>Королев</span></div>
           </div>
           <div class="line-bottom"></div>
           <div class="header-info__links">
-            <nav>
-              <ul>
-                <li>Подбор профосмотра</li>
-                <div id="services-btn" class="header-info__services-btn">
-                  Услуги
-                  <div class="services-open"></div>
-                </div>
-                <div class="services-block hidden"></div>
-                <div id="services-block" class="services-block hidden"></div>
-                <div style="transform: translateY(480px); display: flex; flex-direction: column; gap: 17px;">
-                  <li>О медцентре</li>
-                  <li>Галерея</li>
-                  <li>Благодарности</li>
-                  <li>Лицензии</li>
-                  <li>Контакты</li>
-                </div>
-              </ul>
-            </nav>
+            <div>Подбор профосмотра</div>
+            <div id="services-btn" class="header-info__services-btn">
+              Услуги
+              <div class="services-open"></div>
+            </div>
+            <div id="services-block" class="services-block hidden"></div>
+            <ul>
+              <li>О медцентре</li>
+              <li>Галерея</li>
+              <li>Благодарности</li>
+              <li>Лицензии</li>
+              <li>Контакты</li>
+            </ul>
           </div>
         </div>
 
@@ -128,11 +119,17 @@
                 организации
               </div>
               <form class="hero-dialog__form">
-                <input
-                  class="input-primary"
-                  placeholder="Ваш номер телефона"
-                  type="text"
-                />
+                <div class="input-primary-group">
+                  <input
+                    id="hero-dialog-input"
+                    class="input-primary"
+                    placeholder=" "
+                    type="text"
+                  />
+                  <label for="hero-dialog-input"
+                    >Ваш номер телефона<span>*</span></label
+                  >
+                </div>
                 <button class="btn-commercial" type="submit">
                   Получить коммерческое предложение
                 </button>
@@ -150,7 +147,7 @@
         </div>
       </div>
 
-      <div class="quiz">
+      <div id="quiz" class="quiz">
         <div class="quiz__wrap">
           <div>
             <div class="quiz__title">
@@ -171,11 +168,18 @@
                     и коммерческое предложение
                   </div>
                   <form class="quiz-feedback__form">
-                    <input
-                      class="input-primary"
-                      placeholder="Ваш номер телефона"
-                      type="text"
-                    />
+                    <div class="input-primary-group">
+                      <input
+                        id="quiz-feedback-input"
+                        class="input-primary"
+                        placeholder=" "
+                        type="text"
+                      />
+                      <label for="quiz-feedback-input"
+                        >Ваш номер телефона
+                        <span>*</span>
+                      </label>
+                    </div>
                     <button class="btn-commercial" type="submit">
                       Получить коммерческое предложение
                     </button>
@@ -187,7 +191,9 @@
                 </div>
               </div>
 
-              <img class="quiz-form__image" src="#" alt="quiz" />
+              <div class="quiz-form__image-wrap">
+                <img class="quiz-form__image" src="#" alt="quiz" />
+              </div>
               <div class="quiz-body">
                 <div class="quiz-body__steps line-bottom"></div>
                 <div class="quiz-body__questions">

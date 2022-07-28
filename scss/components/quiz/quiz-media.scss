@@ -1,0 +1,10 @@
+@include mobile() {
+  .quiz {
+    height: 100%;
+    padding: 25px 0;
+
+    &__wrap {
+      padding: 0 5px;
+    }
+  }
+}

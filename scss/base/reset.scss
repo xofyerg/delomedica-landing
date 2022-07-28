@@ -87,15 +87,6 @@ h6 {
   font-weight: inherit;
 }
 
-::placeholder {
-  color: $black;
-  opacity: 1;
-}
-
-:-ms-input-placeholder {
-  color: $black;
-}
-
-::-ms-input-placeholder {
-  color: $black;
+input::placeholder {
+  opacity: 0;
 }

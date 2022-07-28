@@ -17,7 +17,8 @@ const heroDialog = document.getElementById("hero-dialog");
 const openModalBtn = document.getElementById("open-modal");
 const closeModalBtn = heroDialog.querySelector("#close-modal");
 
-const quizForm = document.getElementById("quiz-form");
+const quiz = document.getElementById("quiz");
+const quizForm = quiz.querySelector("#quiz-form");
 const quizFeedback = quizForm.querySelector(".quiz-feedback");
 const quizFormImage = quizForm.querySelector(".quiz-form__image");
 const quizBodySteps = quizForm.querySelector(".quiz-body__steps");
@@ -34,7 +35,7 @@ openLinksBtn.addEventListener("click", () => {
   openLinksBtn.classList.toggle("btn-header-cancel");
 
   headerInfo.classList.toggle("open");
-  body.classList.toggle("hide-scroll");
+  quiz.classList.toggle("hidden");
 });
 openServicesBtn.addEventListener("click", () => {
   servicesBlock.classList.toggle("hidden");

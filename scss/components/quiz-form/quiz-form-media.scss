@@ -1,0 +1,15 @@
+@include laptop() {
+  .quiz-form {
+    &__image-wrap {
+      width: 200px;
+    }
+  }
+}
+
+@include tablet() {
+  .quiz-form {
+    &__image-wrap {
+      display: none;
+    }
+  }
+}

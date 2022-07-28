@@ -1,0 +1,12 @@
+.services-block {
+  padding-left: 40px;
+
+  ul {
+    @include flex-col(17px);
+  }
+
+  ul li {
+    color: $md-grey;
+    cursor: pointer;
+  }
+}

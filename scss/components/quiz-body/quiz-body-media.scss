@@ -1,0 +1,66 @@
+@include desktop() {
+  .quiz-body {
+    &__checks li {
+      margin-bottom: 9px;
+      font-size: 11px;
+    }
+  }
+}
+
+@include tablet() {
+  .quiz-body {
+    &__steps {
+      margin-bottom: 20px;
+    }
+
+    &__question-title {
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    &__checks li {
+      margin-bottom: 9px;
+      font-size: 10px;
+    }
+  }
+}
+
+@include mobile() {
+  .quiz-body {
+    padding: 25px 15px 0;
+
+    .textarea-primary {
+      margin-top: 20px;
+    }
+
+    .check {
+      margin-right: 0;
+    }
+
+    .check-wrap {
+      @include flex-col(17px);
+    }
+
+    &__checks {
+      column-count: 1;
+    }
+
+    &__checks li {
+      margin-bottom: 8px;
+      font-size: 9px;
+    }
+
+    .check__input:checked + .check__box::after {
+      left: 1px;
+      top: 1px;
+      width: 14px;
+      height: 9px;
+    }
+
+    &__btns {
+      right: 15px;
+      bottom: 15px;
+      left: 15px;
+    }
+  }
+}

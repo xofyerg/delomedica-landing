@@ -1,13 +1,13 @@
 .header-info {
   transform: translateX(-100%);
-  position: fixed;
-  top: 69px;
+  position: absolute;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   background-color: $white;
   z-index: 30;
-  padding: 20px 24px;
+  padding: 20px 24px 0;
 
   &__services-btn {
     position: relative;
@@ -18,7 +18,7 @@
     }
 
     .services-close {
-      //left: 53px;
+      left: 53px;
     }
   }
 
@@ -40,8 +40,9 @@
   }
 
   &__links {
+    @include flex-col(17px);
     margin-top: 40px;
-    position: relative;
+    padding-bottom: 25px;
   }
 
   &__links ul {

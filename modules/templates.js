@@ -77,7 +77,7 @@ export const renderStepThree = () => {
 
 export const renderStepFour = () => {
   return `
-    <div class="">
+    <div class="check-wrap">
       <label class="check" for="med-radio">
         <input
           id="med-radio"

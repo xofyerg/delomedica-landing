@@ -43,11 +43,36 @@
   }
 }
 
+.check-wrap {
+  display: inline;
+}
+
 .input-primary {
   height: 60px;
   border: 1px solid $light;
   border-radius: 6px;
   padding: 0 21px;
+  width: 100%;
+}
+
+.input-primary-group {
+  position: relative;
+
+  > input:focus + label {
+    opacity: 0;
+  }
+
+  > label {
+    position: absolute;
+    font-size: 13px;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    span {
+      color: $red;
+    }
+  }
 }
 
 .textarea-primary {
