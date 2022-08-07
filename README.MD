@@ -9,3 +9,5 @@
 1. Javascript
 2. SCSS
 
+## Deploy - GitHub Pages
+https://xofyerg.github.io/delomedica-landing/
