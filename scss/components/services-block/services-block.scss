@@ -1,12 +1,20 @@
 .services-block {
   padding-left: 40px;
 
-  ul {
+  nav {
     @include flex-col(17px);
   }
 
-  ul li {
+  nav a {
     color: $md-grey;
-    cursor: pointer;
+  }
+
+  &_header {
+    position: absolute;
+    top: 0;
+    left: 15%;
+    z-index: 30;
+    background-color: $white;
+    padding: 15px 25px 20px;
   }
 }

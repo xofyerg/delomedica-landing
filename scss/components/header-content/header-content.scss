@@ -29,14 +29,10 @@
     height: 31px;
   }
 
-  &__links ul {
+  &__links nav {
     display: flex;
     gap: 30px;
     margin-left: 4px;
-  }
-
-  &__links ul li {
-    cursor: pointer;
   }
 
   &__services-btn {

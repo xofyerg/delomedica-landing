@@ -292,13 +292,10 @@
   border-left: 1px solid #009fe3;
   height: 31px;
 }
-.header-content__links ul {
+.header-content__links nav {
   display: flex;
   gap: 30px;
   margin-left: 4px;
-}
-.header-content__links ul li {
-  cursor: pointer;
 }
 .header-content__services-btn {
   position: relative;
@@ -308,24 +305,24 @@
 }
 
 @media (max-width: 1200px) {
-  .header-content__links ul {
+  .header-content__links nav {
     gap: 14px;
   }
 }
 @media (max-width: 992px) {
-  .header-content__links ul {
+  .header-content__links nav {
     gap: 12px;
     font-size: 11px;
   }
 }
 @media (max-width: 768px) {
-  .header-content__links ul {
+  .header-content__links nav {
     gap: 10px;
     font-size: 10px;
   }
 }
 @media (max-width: 576px) {
-  .header-content__links ul {
+  .header-content__links nav {
     display: none;
   }
   .header-content__logo {
@@ -342,10 +339,14 @@
     display: none;
   }
 }
+.header-contacts__email {
+  cursor: pointer;
+}
 .header-contacts__number {
   font-size: 19px;
   font-weight: bold;
   margin: 12px 0 25px;
+  cursor: pointer;
 }
 .header-contacts__city span {
   color: #009fe3;
@@ -425,6 +426,9 @@
   gap: 17px;
   margin: 28px 0;
 }
+.header-info__email {
+  cursor: pointer;
+}
 .header-info__city span {
   color: #009fe3;
   position: relative;
@@ -448,7 +452,7 @@
   margin-top: 40px;
   padding-bottom: 25px;
 }
-.header-info__links ul {
+.header-info__links nav {
   display: flex;
   flex-direction: column;
   gap: 17px;
@@ -463,7 +467,7 @@
   position: absolute;
   height: 732px;
   bottom: 0;
-  left: 17%;
+  left: 16%;
   z-index: 20;
 }
 .hero__wrap {
@@ -806,14 +810,21 @@
 .services-block {
   padding-left: 40px;
 }
-.services-block ul {
+.services-block nav {
   display: flex;
   flex-direction: column;
   gap: 17px;
 }
-.services-block ul li {
+.services-block nav a {
   color: #726F77;
-  cursor: pointer;
+}
+.services-block_header {
+  position: absolute;
+  top: 0;
+  left: 15%;
+  z-index: 30;
+  background-color: #ffffff;
+  padding: 15px 25px 20px;
 }
 
 * {
@@ -935,10 +946,9 @@ body {
   margin-top: 29px;
   line-height: 15px;
 }
-.text-bottom span {
+.text-bottom a {
   color: #009fe3;
   text-decoration-line: underline;
-  cursor: pointer;
 }
 
 .open {
@@ -947,6 +957,10 @@ body {
 
 .hide-scroll {
   overflow-y: hidden;
+}
+
+.clickable {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

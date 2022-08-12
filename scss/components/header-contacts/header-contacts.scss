@@ -1,8 +1,13 @@
 .header-contacts {
+  &__email {
+    cursor: pointer;
+  }
+
   &__number {
     font-size: 19px;
     font-weight: bold;
     margin: 12px 0 25px;
+    cursor: pointer;
   }
 
   &__city span {

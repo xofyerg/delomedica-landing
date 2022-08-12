@@ -1,6 +1,6 @@
 @include desktop() {
   .header-content {
-    &__links ul {
+    &__links nav {
       gap: 14px;
     }
   }
@@ -8,7 +8,7 @@
 
 @include laptop() {
   .header-content {
-    &__links ul {
+    &__links nav {
       gap: 12px;
       font-size: 11px;
     }
@@ -17,7 +17,7 @@
 
 @include tablet() {
   .header-content {
-    &__links ul {
+    &__links nav {
       gap: 10px;
       font-size: 10px;
     }
@@ -26,7 +26,7 @@
 
 @include mobile() {
   .header-content {
-    &__links ul {
+    &__links nav {
       display: none;
     }
 

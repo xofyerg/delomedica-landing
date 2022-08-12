@@ -6,12 +6,12 @@ export const renderServices = () => {
   const serviceItems = services
     .map((service, index) => {
       if (index !== 1 && index !== 11) {
-        return `<li>${service}</li>`;
+        return `<a href="#">${service}</a>`;
       }
     })
     .join("");
   return `
-     <ul>${serviceItems}</ul>
+     <nav>${serviceItems}</nav>
   `;
 };
 

@@ -11,7 +11,8 @@ const openLinksBtn = document.querySelector(".header__burger");
 
 const openServicesBtn = document.getElementById("services-btn");
 const servicesArrow = openServicesBtn.querySelector(".services-open");
-const servicesBlock = document.querySelector(".services-block");
+const servicesBlockMobile = document.getElementById("services-block-mobile");
+const servicesBlockDesktop = document.getElementById("services-block-desktop");
 
 const heroDialog = document.getElementById("hero-dialog");
 const openModalBtn = document.getElementById("open-modal");
@@ -38,7 +39,7 @@ openLinksBtn.addEventListener("click", () => {
   quiz.classList.toggle("hidden");
 });
 openServicesBtn.addEventListener("click", () => {
-  servicesBlock.classList.toggle("hidden");
+  servicesBlockMobile.classList.toggle("hidden");
 
   if (servicesArrow.classList.contains("services-open")) {
     servicesArrow.classList.remove("services-open");
@@ -84,5 +85,6 @@ function renderQuiz(quizPage) {
   quizBodyContent.innerHTML = content[quizPage - 1];
 }
 
-servicesBlock.innerHTML = renderServices();
+servicesBlockDesktop.innerHTML = renderServices();
+servicesBlockMobile.innerHTML = renderServices();
 renderQuiz(quizPage);

@@ -26,18 +26,16 @@
             </div>
             <div class="header-content__links">
               <nav>
-                <ul>
-                  <li>Подбор профосмотра</li>
-                  <div class="header-content__services-btn">
-                    Услуги
-                    <div class="services-open"></div>
-                  </div>
-                  <li>О медцентре</li>
-                  <li>Галерея</li>
-                  <li>Благодарности</li>
-                  <li>Лицензии</li>
-                  <li>Контакты</li>
-                </ul>
+                <a href="#">Подбор профосмотра</a>
+                <div class="header-content__services-btn">
+                  Услуги
+                  <div class="services-open"></div>
+                </div>
+                <a href="#">О медцентре</a>
+                <a href="#">Галерея</a>
+                <a href="#">Благодарности</a>
+                <a href="#">Лицензии</a>
+                <a href="#">Контакты</a>
               </nav>
             </div>
           </div>
@@ -53,6 +51,11 @@
       </header>
 
       <div class="hero">
+        <div
+          id="services-block-desktop"
+          class="services-block services-block_header"
+        ></div>
+
         <div id="header-info" class="header-info">
           <div class="line-bottom"></div>
           <div class="header-info__contacts">
@@ -61,19 +64,22 @@
           </div>
           <div class="line-bottom"></div>
           <div class="header-info__links">
-            <div>Подбор профосмотра</div>
-            <div id="services-btn" class="header-info__services-btn">
-              Услуги
-              <div class="services-open"></div>
-            </div>
-            <div id="services-block" class="services-block hidden"></div>
-            <ul>
-              <li>О медцентре</li>
-              <li>Галерея</li>
-              <li>Благодарности</li>
-              <li>Лицензии</li>
-              <li>Контакты</li>
-            </ul>
+            <nav>
+              <a href="#">Подбор профосмотра</a>
+              <div id="services-btn" class="header-info__services-btn">
+                Услуги
+                <div class="services-open"></div>
+              </div>
+              <div
+                id="services-block-mobile"
+                class="services-block hidden"
+              ></div>
+              <a href="#">О медцентре</a>
+              <a href="#">Галерея</a>
+              <a href="#">Благодарности</a>
+              <a href="#">Лицензии</a>
+              <a href="#">Контакты</a>
+            </nav>
           </div>
         </div>
 
@@ -125,6 +131,7 @@
                     class="input-primary"
                     placeholder=" "
                     type="text"
+                    required
                   />
                   <label for="hero-dialog-input"
                     >Ваш номер телефона<span>*</span></label
@@ -137,9 +144,9 @@
               <div class="text-bottom">
                 Передавая информацию сайту, вы <br />
                 принимаете условия <br />
-                <span
+                <a href="#"
                   >Политики защиты персональной <br />
-                  информации</span
+                  информации</a
                 >
               </div>
             </div>
@@ -171,9 +178,10 @@
                     <div class="input-primary-group">
                       <input
                         id="quiz-feedback-input"
-                        class="input-primary"
+                        class="input-primary required"
                         placeholder=" "
                         type="text"
+                        required
                       />
                       <label for="quiz-feedback-input"
                         >Ваш номер телефона<span>*</span>
@@ -184,7 +192,7 @@
                     </button>
                     <div class="text-bottom">
                       Передавая информацию сайту, вы принимаете условия
-                      <span>Политики защиты персональной информации</span>
+                      <a href="#">Политики защиты персональной информации</a>
                     </div>
                   </form>
                 </div>

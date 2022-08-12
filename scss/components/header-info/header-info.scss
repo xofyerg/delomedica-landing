@@ -27,6 +27,10 @@
     margin: 28px 0;
   }
 
+  &__email {
+    cursor: pointer;
+  }
+
   &__city span {
     color: $primary;
     position: relative;
@@ -45,7 +49,7 @@
     padding-bottom: 25px;
   }
 
-  &__links ul {
+  &__links nav {
     @include flex-col(17px);
   }
 }

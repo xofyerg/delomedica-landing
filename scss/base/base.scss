@@ -24,10 +24,9 @@ body {
   margin-top: 29px;
   line-height: 15px;
 
-  span {
+  a {
     color: $primary;
     text-decoration-line: underline;
-    cursor: pointer;
   }
 }
 
@@ -37,4 +36,8 @@ body {
 
 .hide-scroll {
   overflow-y: hidden;
+}
+
+.clickable {
+  cursor: pointer;
 }
