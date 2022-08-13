@@ -9,16 +9,4 @@
     margin: 12px 0 25px;
     cursor: pointer;
   }
-
-  &__city span {
-    color: $primary;
-    position: relative;
-    cursor: pointer;
-  }
-
-  &__city span::after {
-    @include icon-mixin(10px, 6px, url("assets/images/figures/down-blue.svg"));
-    bottom: 3px;
-    right: -14px;
-  }
 }

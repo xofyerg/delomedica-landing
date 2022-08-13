@@ -1,0 +1,12 @@
+@include tablet() {
+  .services-block {
+    top: 67%;
+    padding-top: 20px;
+  }
+}
+
+@include mobile() {
+  .services-block {
+    padding-top: 0;
+  }
+}

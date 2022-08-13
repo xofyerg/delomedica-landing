@@ -58,11 +58,12 @@
 .input-primary-group {
   position: relative;
 
-  > input:focus + label {
+  input:focus + label,
+  input:not(:placeholder-shown) + label {
     opacity: 0;
   }
 
-  > label {
+  label {
     position: absolute;
     font-size: 13px;
     left: 25px;

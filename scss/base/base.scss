@@ -38,6 +38,15 @@ body {
   overflow-y: hidden;
 }
 
-.clickable {
+.primary-city span {
+  color: $primary;
+  position: relative;
   cursor: pointer;
+  padding-right: 1em;
+
+  &::after {
+    @include icon-mixin(10px, 6px, url("assets/images/figures/down-blue.svg"));
+    bottom: 3px;
+    right: 0;
+  }
 }

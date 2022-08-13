@@ -37,8 +37,14 @@
 
   &__services-btn {
     position: relative;
-    margin-right: 1em;
+    padding-right: 1em;
     display: flex;
     cursor: pointer;
+
+    &::after {
+      @include icon-mixin(10px, 6px, url("assets/images/figures/down-grey.svg"));
+      bottom: 3px;
+      right: 0;
+    }
   }
 }

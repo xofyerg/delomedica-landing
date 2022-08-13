@@ -1,13 +1,11 @@
 .services-open {
-  @include icon-mixin(10px, 6px, url("assets/images/figures/down-grey.svg"));
+  @include icon-mixin(18px, 6px, url("assets/images/figures/down-black.svg"));
   bottom: 3px;
-  right: -14px;
 }
 
 .services-close {
-  @include icon-mixin(10px, 6px, url("assets/images/figures/up-black.svg"));
+  @include icon-mixin(18px, 6px, url("assets/images/figures/up-black.svg"));
   bottom: 4px;
-  right: -14px;
 }
 
 .icon-circle {

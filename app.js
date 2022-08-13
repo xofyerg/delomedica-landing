@@ -6,11 +6,17 @@ let quizPage = 1;
 
 // ---------- get dom ---------- //
 const body = document.body;
-const headerInfo = document.querySelector(".header-info");
+const headerMobile = document.querySelector(".header-mobile");
 const openLinksBtn = document.querySelector(".header__burger");
 
-const openServicesBtn = document.getElementById("services-btn");
-const servicesArrow = openServicesBtn.querySelector(".services-open");
+const openServicesMobile = document.querySelector(
+  ".header-mobile__services-btn"
+);
+const openServicesDesktop = document.querySelector(
+  ".header-content__services-btn"
+);
+const toggleServicesArrow = openServicesMobile.querySelector(".services-open");
+
 const servicesBlockMobile = document.getElementById("services-block-mobile");
 const servicesBlockDesktop = document.getElementById("services-block-desktop");
 
@@ -30,41 +36,70 @@ const btnQuizPrev = quizForm.querySelector(".btn-prev");
 const btnQuizNext = quizForm.querySelector(".btn-next");
 
 // ---------- listeners ---------- //
-openLinksBtn.addEventListener("click", () => {
+openLinksBtn.addEventListener("click", openLinksBtnHandler);
+
+openServicesMobile.addEventListener("click", openServicesMobileHandler);
+openServicesDesktop.addEventListener("mouseover", () =>
+  openServicesDesktopHandler(true)
+);
+openServicesDesktop.addEventListener("mouseout", () =>
+  openServicesDesktopHandler(false)
+);
+servicesBlockDesktop.addEventListener("mouseover", () =>
+  openServicesDesktopHandler(true)
+);
+servicesBlockDesktop.addEventListener("mouseout", () =>
+  openServicesDesktopHandler(false)
+);
+
+openModalBtn.addEventListener("click", () => openModalHandler(true));
+closeModalBtn.addEventListener("click", () => openModalHandler(false));
+
+btnQuizPrev.addEventListener("click", () => toggleQuestionsHandler(true));
+btnQuizNext.addEventListener("click", () => toggleQuestionsHandler());
+
+// ---------- functions ---------- //
+function openLinksBtnHandler() {
   openLinksBtn.classList.toggle("header__burger");
   openLinksBtn.classList.toggle("btn-cancel");
   openLinksBtn.classList.toggle("btn-header-cancel");
 
-  headerInfo.classList.toggle("open");
+  headerMobile.classList.toggle("open");
   quiz.classList.toggle("hidden");
-});
-openServicesBtn.addEventListener("click", () => {
+}
+
+function openServicesMobileHandler() {
   servicesBlockMobile.classList.toggle("hidden");
 
-  if (servicesArrow.classList.contains("services-open")) {
-    servicesArrow.classList.remove("services-open");
-    servicesArrow.classList.add("services-close");
+  if (toggleServicesArrow.classList.contains("services-open")) {
+    toggleServicesArrow.classList.remove("services-open");
+    toggleServicesArrow.classList.add("services-close");
   } else {
-    servicesArrow.classList.add("services-open");
-    servicesArrow.classList.remove("services-close");
+    toggleServicesArrow.classList.add("services-open");
+    toggleServicesArrow.classList.remove("services-close");
   }
-});
-openModalBtn.addEventListener("click", () => {
-  heroDialog.classList.add("open");
-  body.classList.add("hide-scroll");
-});
-closeModalBtn.addEventListener("click", () => {
-  heroDialog.classList.remove("open");
-  body.classList.remove("hide-scroll");
-});
-btnQuizPrev.addEventListener("click", () => {
-  quizPage--;
+}
+
+function openServicesDesktopHandler(option) {
+  option
+    ? servicesBlockDesktop.classList.remove("hidden")
+    : servicesBlockDesktop.classList.add("hidden");
+}
+
+function openModalHandler(option) {
+  if (option) {
+    heroDialog.classList.add("open");
+    body.classList.add("hide-scroll");
+  } else {
+    heroDialog.classList.remove("open");
+    body.classList.remove("hide-scroll");
+  }
+}
+
+function toggleQuestionsHandler(option) {
+  option ? quizPage-- : quizPage++;
   renderQuiz(quizPage);
-});
-btnQuizNext.addEventListener("click", () => {
-  quizPage++;
-  renderQuiz(quizPage);
-});
+}
 
 // ---------- main renders ---------- //
 function renderQuiz(quizPage) {
