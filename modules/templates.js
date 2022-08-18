@@ -29,16 +29,16 @@ export const renderSteps = (quizItem) => {
   `;
 };
 
-export const renderStepOne = () => {
+export function renderStepOne() {
   return `
     <textarea
       class="textarea-primary"
       placeholder="Введите ответ"
     ></textarea>
   `;
-};
+}
 
-export const renderStepTwo = () => {
+export function renderStepTwo() {
   const serviceItems = services
     .map(
       (service, index) =>
@@ -64,18 +64,18 @@ export const renderStepTwo = () => {
       ${serviceItems}
     </ul>
   `;
-};
+}
 
-export const renderStepThree = () => {
+export function renderStepThree() {
   return `
     <textarea
       class="textarea-primary"
       placeholder="Введите число"
     ></textarea>
   `;
-};
+}
 
-export const renderStepFour = () => {
+export function renderStepFour() {
   return `
     <div class="check-wrap">
       <label class="check" for="med-radio">
@@ -103,4 +103,4 @@ export const renderStepFour = () => {
       </label>
     </div>
   `;
-};
+}
