@@ -1,6 +1,10 @@
-import { quizData } from "./data.js";
-import { renderSteps } from "./templates.js";
+import { quizData } from "../helpers/data.js";
+import { renderSteps } from "../helpers/templates.js";
 
+let quizPage = 1;
+const { images, questions, content } = quizData;
+
+// ---------- get dom ---------- //
 const quiz = document.querySelector("#quiz");
 const quizForm = quiz.querySelector("#quiz-form");
 const quizFeedback = quizForm.querySelector(".quiz-feedback");
@@ -12,12 +16,11 @@ const quizBodyContent = quizForm.querySelector(".quiz-body__content");
 const btnQuizPrev = quizForm.querySelector(".btn-prev");
 const btnQuizNext = quizForm.querySelector(".btn-next");
 
+// ---------- listeners ---------- //
 btnQuizPrev.addEventListener("click", () => toggleQuestionsHandler(true));
 btnQuizNext.addEventListener("click", () => toggleQuestionsHandler());
 
-let quizPage = 1;
-const { images, questions, content } = quizData;
-
+// ---------- functions ---------- //
 function toggleQuestionsHandler(option) {
   option ? quizPage-- : quizPage++;
   renderQuiz();
@@ -36,7 +39,6 @@ export function renderQuiz() {
       toggleQuestionsHandler(true)
     );
     btnQuizNext.removeEventListener("click", () => toggleQuestionsHandler());
-
     return;
   }
 
